@@ -1,0 +1,16 @@
+.gwb-category {
+  cursor: pointer;
+
+  &__path,
+  &__text {
+    transition: all 0.2s ease;
+  }
+  &:hover {
+    circle {
+      fill: #00378b;
+    }
+    text {
+      fill: #fff;
+    }
+  }
+}

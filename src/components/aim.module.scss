@@ -1,0 +1,16 @@
+.gwb-aim {
+  cursor: pointer;
+
+  path,
+  text {
+    transition: all 0.2s ease;
+  }
+  &:hover {
+    path {
+      fill: #00378b;
+    }
+    text {
+      fill: #fff;
+    }
+  }
+}
