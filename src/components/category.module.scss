@@ -5,12 +5,19 @@
   &__text {
     transition: all 0.2s ease;
   }
-  &:hover {
-    circle {
-      fill: #00378b;
-    }
-    text {
-      fill: #fff;
+  &__quote {
+    &:hover {
+      .gwb-category__quote__circle {
+        transition: all 0.2s ease;
+        fill: pink;
+      }
     }
   }
+}
+
+#inner {
+  outline: 1px solid salmon;
+}
+#outer {
+  outline: 1px solid chartreuse;
 }

@@ -1,26 +1,48 @@
+import { Dispatch, SetStateAction } from 'react';
 import styles from './category.module.scss';
 
 interface Props {
   label: string;
-  quotes: string[];
-  index: number;
+  quotes: { title: string; id: number }[];
+  id: number;
+  quoteCount: number;
+  setSelectedQuoteId: Dispatch<
+    SetStateAction<{ id: number; categoryId: number } | undefined>
+  >;
 }
 
-export default function Category({ label, quotes, index }: Props) {
-  const degree = index * 36;
-  const quoteCount = quotes.length;
+export default function Category({
+  label,
+  quotes,
+  id,
+  quoteCount,
+  setSelectedQuoteId,
+}: Props) {
+  const index = id - 1;
 
-  const quotedegrees = (cirle: 'outer' | 'inner', i: number) => {
+  const degree = index * 36;
+
+  const quotedegrees = (cirle: 'outer' | 'inner', quoteId: number) => {
     if (cirle === 'outer') {
-      return (50 / quoteCount) * (quoteCount - i);
+      return (50 / quoteCount) * quoteId;
     }
-    return (50 / quoteCount) * (quoteCount - i + 1);
+    if (cirle === 'inner') {
+      return (50 / quoteCount) * (quoteId - 1);
+    }
   };
 
   return (
     <svg viewBox="25 0 50 50" className={styles['gwb-category']}>
-      {quotes.map((quote, i) => (
-        <>
+      {quotes.map((quote) => (
+        <g
+          className={styles['gwb-category__quote']}
+          style={{
+            transformOrigin: 'bottom right',
+            clipPath: 'url(#clip-triangle)',
+          }}
+          transform={`rotate(${degree})`}
+          key={quote.id}
+        >
           <defs>
             <clipPath id="clip-triangle">
               <path
@@ -30,38 +52,39 @@ export default function Category({ label, quotes, index }: Props) {
                 strokeWidth={0.2}
               />
             </clipPath>
-            <mask id="clip-circle">
+            <mask id="hole">
               <rect width="100%" height="100%" fill="white" />
               <circle
+                id="inner"
                 cx={50}
                 cy={50}
-                r={quotedegrees('inner', i)}
-                fill="black"
-                opacity={0}
+                r={quotedegrees('inner', quote.id)}
+                fill="#000"
               />
             </mask>
           </defs>
 
-          <g
-            className={styles['gwb-category__path']}
-            style={{
-              transformOrigin: 'bottom right',
-              clipPath: 'url(#clip-triangle)',
-            }}
-            transform={`rotate(${degree})`}
+          {/* <circle
+            cx={50}
+            cy={50}
+            r={quotedegrees('outer', i)}
+            stroke="#fff"
+            strokeWidth={0.2}
             fill="none"
-          >
-            <circle
-              mask="url(#clip-circle)"
-              cx={50}
-              cy={50}
-              r={quotedegrees('outer', i)}
-              fill={index % 2 === 1 ? '#00378b' : '#e2007a'}
-              stroke="#fff"
-              strokeWidth={0.2}
-            />
-          </g>
-        </>
+          /> */}
+          <circle
+            className={styles['gwb-category__quote__circle']}
+            id="outer"
+            mask={quote.id === 1 ? '' : 'url(#hole)'}
+            cx={50}
+            cy={50}
+            r={quotedegrees('outer', quote.id)}
+            fill={index % 2 === 1 ? '#00378b' : '#e2007a'}
+            stroke="#fff"
+            strokeWidth={0.2}
+            onClick={() => setSelectedQuoteId({ id: quote.id, categoryId: id })}
+          />
+        </g>
       ))}
 
       <text

@@ -1,4 +1,4 @@
-import styles from './aim.module.scss';
+import styles from './Aim.module.scss';
 
 interface Props {
   label: string;
