@@ -1,38 +1,49 @@
+import { Dispatch, SetStateAction } from 'react';
 import styles from './Aim.module.scss';
+import classnames from 'classnames';
 
 interface Props {
   label: string;
   index: number;
+  selected: number;
+  setSelected: Dispatch<SetStateAction<number>>;
 }
 
-export default function Aim({ label, index }: Props) {
+export default function Aim({ label, index, selected, setSelected }: Props) {
   const degree = index * -11.25;
 
   return (
-    <svg viewBox="25 0 50 50" className={styles['gwb-aim']}>
-      <path
-        d="m 50 0 L .96 9.75 C .33 6.6 0 3.34 0 0 h 50 Z"
+    <svg
+      viewBox="25 0 50 50"
+      className={classnames(styles['gwb-aim'], {
+        [styles['gwb-aim--selected']]: selected === index,
+      })}
+      onClick={() => setSelected(index)}
+    >
+      <g
         style={{ transformOrigin: 'top right' }}
         transform={`rotate(${degree})`}
-        fill="#fff"
-        stroke="#00378b"
-        strokeWidth={0.1}
-      />
-      <text
-        x={index < 8 ? 2 : 98}
-        y={index < 8 ? 3 : -1}
-        fontSize={2.5}
-        style={{
-          transformOrigin: 'top right',
-        }}
-        textAnchor={index < 8 ? 'start' : 'end'}
-        //todo flip
-        transform={
-          index < 8 ? `rotate(${degree})` : `rotate(${degree}) scale(-1,-1)`
-        }
       >
-        {label}
-      </text>
+        <path d="m 50 0 L .96 9.75 C .33 6.6 0 3.34 0 0 h 50 Z" />
+        <line x1="50" y1="0" x2="0 " y2="0" stroke="#000" strokeWidth={0.1} />
+        <text
+          className={styles['gwb-aim__text']}
+          x={4}
+          y={3.5}
+          fontSize={2.5}
+          style={{
+            transformOrigin: 'center center',
+          }}
+          textAnchor={index < 8 ? 'start' : 'end'}
+          transform={
+            index < 8
+              ? 'rotate(-6)'
+              : 'rotate(-5) scale(-1 -1) translate(42.5 44.5)'
+          }
+        >
+          {label}
+        </text>
+      </g>
     </svg>
   );
 }

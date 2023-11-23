@@ -1,16 +1,36 @@
+@import 'src/assets/styles/tokens';
+
 .gwb-aim {
   cursor: pointer;
 
-  path,
-  text {
-    transition: all 0.2s ease;
+  path {
+    fill: #fff;
+    transition: all 0.3s ease;
   }
+  text {
+    transition: all 0.3s ease;
+  }
+
   &:hover {
     path {
-      fill: #00378b;
+      fill: $color-secondary-200;
     }
     text {
       fill: #fff;
+    }
+  }
+
+  &--selected {
+    text {
+      fill: #fff;
+    }
+    path {
+      fill: $color-secondary-200;
+    }
+    &:hover {
+      path {
+        fill: $color-secondary-100;
+      }
     }
   }
 }

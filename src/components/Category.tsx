@@ -1,12 +1,13 @@
 import { Dispatch, SetStateAction } from 'react';
-import styles from './category.module.scss';
+import styles from './Category.module.scss';
 
 interface Props {
   label: string;
   quotes: { title: string; id: number }[];
   id: number;
   quoteCount: number;
-  setSelectedQuoteId: Dispatch<
+  selected: { id: number; categoryId: number } | undefined;
+  setSelected: Dispatch<
     SetStateAction<{ id: number; categoryId: number } | undefined>
   >;
 }
@@ -16,7 +17,8 @@ export default function Category({
   quotes,
   id,
   quoteCount,
-  setSelectedQuoteId,
+  selected,
+  setSelected,
 }: Props) {
   const index = id - 1;
 
@@ -73,16 +75,23 @@ export default function Category({
             fill="none"
           /> */}
           <circle
-            className={styles['gwb-category__quote__circle']}
+            className={
+              styles[
+                `${
+                  index % 2 === 1
+                    ? 'gwb-category__quote__circle--blue'
+                    : 'gwb-category__quote__circle--pink'
+                }`
+              ]
+            }
             id="outer"
             mask={quote.id === 1 ? '' : 'url(#hole)'}
             cx={50}
             cy={50}
             r={quotedegrees('outer', quote.id)}
-            fill={index % 2 === 1 ? '#00378b' : '#e2007a'}
             stroke="#fff"
             strokeWidth={0.2}
-            onClick={() => setSelectedQuoteId({ id: quote.id, categoryId: id })}
+            onClick={() => setSelected({ id: quote.id, categoryId: id })}
           />
         </g>
       ))}
@@ -94,6 +103,7 @@ export default function Category({
         fontSize={3}
         style={{
           transformOrigin: 'bottom right',
+          textTransform: 'uppercase',
         }}
         textAnchor={index < 3 ? 'start' : 'end'}
         transform={

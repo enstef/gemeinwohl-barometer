@@ -1,3 +1,5 @@
+@import 'src/assets/styles/tokens';
+
 .gwb-category {
   cursor: pointer;
 
@@ -6,18 +8,23 @@
     transition: all 0.2s ease;
   }
   &__quote {
-    &:hover {
-      .gwb-category__quote__circle {
+    &__circle {
+      &--pink {
+        fill: $color-primary-200;
         transition: all 0.2s ease;
-        fill: pink;
+      }
+      &--blue {
+        fill: $color-secondary-200;
+        transition: all 0.2s ease;
+      }
+    }
+    &:hover {
+      .gwb-category__quote__circle--pink {
+        fill: $color-primary-300;
+      }
+      .gwb-category__quote__circle--blue {
+        fill: $color-secondary-300;
       }
     }
   }
-}
-
-#inner {
-  outline: 1px solid salmon;
-}
-#outer {
-  outline: 1px solid chartreuse;
 }

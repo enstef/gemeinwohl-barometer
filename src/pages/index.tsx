@@ -3,58 +3,7 @@ import Aim from '@/components/Aim';
 import Category from '@/components/Category';
 import Quote from '@/components/Quote';
 import { useEffect, useState } from 'react';
-
-interface Quote {
-  id: number;
-  title: string;
-  text: string;
-}
-
-interface Category {
-  id: number;
-  name: string;
-  quotes: Quote[];
-}
-
-const categories: Category[] = [
-  {
-    id: 1,
-    name: 'Category 1',
-    quotes: [
-      { id: 1, title: 'Quote 1', text: 'Lorem Ipsum' },
-      { id: 2, title: 'Quote 2', text: 'Lorem Ipsum' },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Category 2',
-    quotes: [
-      { id: 1, title: 'Quote 1', text: 'Lorem Ipsum' },
-      { id: 2, title: 'Quote 2', text: 'Lorem Ipsum' },
-      { id: 3, title: 'Quote 3', text: 'Lorem Ipsum' },
-      { id: 4, title: 'Quote 4', text: 'Lorem Ipsum' },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Category 3',
-    quotes: [{ id: 1, title: 'Quote 1', text: 'Lorem Ipsum' }],
-  },
-  {
-    id: 4,
-    name: 'Category 4',
-    quotes: [{ id: 1, title: 'Quote 1', text: 'Lorem Ipsum' }],
-  },
-  {
-    id: 5,
-    name: 'Category 5',
-    quotes: [
-      { id: 1, title: 'Quote 1', text: 'Lorem Ipsum' },
-      { id: 2, title: 'Quote 2', text: 'Lorem Ipsum' },
-      { id: 3, title: 'Quote 3', text: 'Lorem Ipsum' },
-    ],
-  },
-];
+import { categories } from '@/data';
 
 const quoteCount = categories.sort(
   (a, b) => b.quotes.length - a.quotes.length
@@ -65,28 +14,29 @@ console.log(quoteCount);
 categories.sort((a, b) => a.id - b.id);
 
 const aims = [
-  'Aim 1',
-  'Aim 2',
-  'Aim 3',
-  'Aim 4',
-  'Aim 5',
-  'Aim 6',
-  'Aim 7',
-  'Aim 8',
-  'Aim 9',
-  'Aim 10',
-  'Aim 11',
-  'Aim 12',
-  'Aim 13',
-  'Aim 14',
-  'Aim 15',
-  'Aim 16',
+  'Klimapositivität',
+  'Sauberkeit',
+  'Verkehr',
+  'Nachhaltigkeit',
+  'Bildung',
+  'Gerechtigkeit',
+  'Inklusion',
+  'Wohnen',
+  'Erholung',
+  'Grünflächen',
+  'Kunst und Kultur',
+  'Begegnungsorte',
+  'Älter werden im Viertel',
+  'Nachbar:innenschaft',
+  'Gesundheit',
+  'Vernetzung',
 ];
 
 export default function App() {
   const [selectedQuoteId, setSelectedQuoteId] = useState<
     { id: number; categoryId: number } | undefined
   >();
+  const [selectedAimId, setSelectedAimId] = useState<number>(0);
   const [selectedQuote, setSelectedQuote] = useState<
     { id: number; title: string; text: string } | undefined
   >();
@@ -123,30 +73,38 @@ export default function App() {
                 quotes={category.quotes.sort((a, b) => b.id - a.id)}
                 id={category.id}
                 quoteCount={quoteCount}
-                setSelectedQuoteId={setSelectedQuoteId}
+                selected={selectedQuoteId}
+                setSelected={setSelectedQuoteId}
                 key={index}
               />
             );
           })}
+          <line
+            x1="0"
+            y1="50"
+            x2="100 "
+            y2="50"
+            stroke="#000"
+            strokeWidth={1}
+          />
         </svg>
-        <hr
-          style={{
-            margin: 0,
-            marginTop: '-4px',
-            marginBottom: '-1px',
-            width: '100%',
-            borderTop: '4px solid black',
-          }}
-        />
+
         <svg
           viewBox="0 0 100 50"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid meet"
           width="100%"
           height="50%"
+          style={{ marginTop: '-6px' }}
         >
           {aims.map((aim, index) => (
-            <Aim label={aim} index={index} key={index} />
+            <Aim
+              label={aim}
+              index={index}
+              key={index}
+              selected={selectedAimId}
+              setSelected={setSelectedAimId}
+            />
           ))}
           <circle
             cx={50}
@@ -156,8 +114,14 @@ export default function App() {
             strokeWidth={0.5}
             fill="#fff"
           />
-          <text x={46.5} y={5} fontSize={4}>
-            GQI
+          <text x={50} y={2.5} fontSize={2.25} textAnchor="middle">
+            Gemeinwohl-
+          </text>
+          <text x={50} y={5} fontSize={2.25} textAnchor="middle">
+            quartiers-
+          </text>
+          <text x={50} y={7.5} fontSize={2.25} textAnchor="middle">
+            index
           </text>
         </svg>
       </div>

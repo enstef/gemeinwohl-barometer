@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Baton, sans-serif;
+}
+
+@font-face {
+  font-family: Baton;
+  src: url('../fonts/Baton-Bold.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: Baton;
+  src: url('../fonts/Baton-Medium.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Baton;
+  src: url('../fonts/Baton-MediumItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
