@@ -26,23 +26,27 @@ export default function Aim({ label, index, selected, setSelected }: Props) {
       >
         <path d="m 50 0 L .96 9.75 C .33 6.6 0 3.34 0 0 h 50 Z" />
         <line x1="50" y1="0" x2="0 " y2="0" stroke="#000" strokeWidth={0.1} />
-        <text
-          className={styles['gwb-aim__text']}
-          x={4}
-          y={3.5}
-          fontSize={2.5}
+
+        <g
           style={{
             transformOrigin: 'center center',
           }}
-          textAnchor={index < 8 ? 'start' : 'end'}
           transform={
             index < 8
               ? 'rotate(-6)'
               : 'rotate(-5) scale(-1 -1) translate(42.5 44.5)'
           }
         >
-          {label}
-        </text>
+          <text
+            className={styles['gwb-aim__text']}
+            x={4}
+            y={3.5}
+            fontSize={2.5}
+            textAnchor={index < 8 ? 'start' : 'end'}
+          >
+            {label}
+          </text>
+        </g>
       </g>
     </svg>
   );

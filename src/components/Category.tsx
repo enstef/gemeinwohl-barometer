@@ -98,22 +98,25 @@ export default function Category({
         </g>
       ))}
 
-      <text
-        className={styles['gwb-category__text']}
-        x={index < 3 ? 2 : 98}
-        y={index < 3 ? 48 : 54}
-        fontSize={3}
+      <g
         style={{
           transformOrigin: 'bottom right',
           textTransform: 'uppercase',
         }}
-        textAnchor={index < 3 ? 'start' : 'end'}
         transform={
           index < 3 ? `rotate(${degree})` : `rotate(${degree}) scale(-1,-1)`
         }
       >
-        {label}
-      </text>
+        <text
+          className={styles['gwb-category__text']}
+          x={index < 3 ? 2 : 98}
+          y={index < 3 ? 48 : 54}
+          fontSize={3}
+          textAnchor={index < 3 ? 'start' : 'end'}
+        >
+          {label}
+        </text>
+      </g>
     </svg>
   );
 }
