@@ -3,6 +3,7 @@ import styles from './Category.module.scss';
 
 interface Props {
   label: string;
+  description: string;
   quotes: { title: string; id: number }[];
   id: number;
   quoteCount: number;
@@ -14,6 +15,7 @@ interface Props {
 
 export default function Category({
   label,
+  description,
   quotes,
   id,
   quoteCount,

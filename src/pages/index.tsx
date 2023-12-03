@@ -3,7 +3,7 @@ import Aim from '@/components/Aim';
 import Category from '@/components/Category';
 import Quote from '@/components/Quote';
 import { useEffect, useState } from 'react';
-import { categories } from '@/data';
+import { aims, categories } from '@/data';
 
 const quoteCount = categories.sort(
   (a, b) => b.quotes.length - a.quotes.length
@@ -12,25 +12,6 @@ const quoteCount = categories.sort(
 console.log(quoteCount);
 
 categories.sort((a, b) => a.id - b.id);
-
-const aims = [
-  'Klimapositivität',
-  'Sauberkeit',
-  'Verkehr',
-  'Nachhaltigkeit',
-  'Bildung',
-  'Gerechtigkeit',
-  'Inklusion',
-  'Wohnen',
-  'Erholung',
-  'Grünflächen',
-  'Kunst und Kultur',
-  'Begegnungsorte',
-  'Älter werden im Viertel',
-  'Nachbar:innenschaft',
-  'Gesundheit',
-  'Vernetzung',
-];
 
 export default function App() {
   const [selectedQuoteId, setSelectedQuoteId] = useState<
@@ -70,6 +51,7 @@ export default function App() {
             return (
               <Category
                 label={category.name}
+                description={category.description}
                 quotes={category.quotes.sort((a, b) => b.id - a.id)}
                 id={category.id}
                 quoteCount={quoteCount}
