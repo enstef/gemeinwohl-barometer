@@ -1,5 +1,5 @@
 import Close from '@/assets/icons/Close';
-import styles from './Quote.module.scss';
+import styles from '@/components/Quote.module.scss';
 
 interface Props {
   title?: string;

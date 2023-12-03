@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import styles from './Aim.module.scss';
+import styles from '@/components/Aim.module.scss';
 import classnames from 'classnames';
 
 interface Props {
