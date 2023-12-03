@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import styles from '@/components/Category.module.scss';
+import styles from '@/components/category.module.scss';
 
 interface Props {
   label: string;
