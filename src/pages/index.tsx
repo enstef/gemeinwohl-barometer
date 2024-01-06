@@ -2,37 +2,66 @@ import styles from './index.module.scss';
 import Aim from '@/components/Aim';
 import Category from '@/components/Category';
 import Quote from '@/components/Quote';
-import { useEffect, useState } from 'react';
+import { use, useCallback, useEffect, useState } from 'react';
 import { aims, categories } from '@/data';
 
-const quoteCount = categories.sort(
-  (a, b) => b.quotes.length - a.quotes.length
-)[0].quotes.length;
-
-console.log(quoteCount);
-
-categories.sort((a, b) => a.id - b.id);
-
 export default function App() {
-  const [selectedQuoteId, setSelectedQuoteId] = useState<
-    { id: number; categoryId: number } | undefined
-  >();
   const [selectedAimId, setSelectedAimId] = useState<number>(0);
-  const [selectedQuote, setSelectedQuote] = useState<
-    { id: number; title: string; text: string } | undefined
-  >();
+  const [selectedAim, setSelectedAim] = useState<Aim>(aims[0]);
+  const [selectedTopicId, setSelectedTopicId] = useState<number | undefined>();
+  const [selectedTopic, setSelectedTopic] = useState<Topic | undefined>();
+
+  const [subjectCount, setTopicCount] = useState<number>(0);
+
+  const findTopicsPerCategory = useCallback(
+    (catId: number) => {
+      let foundtopics: Topic[] = [];
+
+      selectedAim.topics.map((top) => {
+        if (top.categoryId === catId) {
+          foundtopics.push(top);
+        }
+      });
+
+      return foundtopics;
+    },
+    [selectedAim.topics]
+  );
+
+  const findMaxTopicCount = useCallback(() => {
+    let max = 1;
+
+    for (let i = 1; i <= 5; i++) {
+      let currMax = findTopicsPerCategory(i).length;
+
+      if (currMax > max) {
+        max = currMax;
+      }
+    }
+
+    return max;
+  }, [findTopicsPerCategory]);
 
   useEffect(() => {
-    if (!selectedQuoteId) return;
+    let foundAim = aims.find((aim, index) => index === selectedAimId);
 
-    const selectedCategory = categories.find(
-      (category) => category.id === selectedQuoteId?.categoryId
-    );
+    if (foundAim) {
+      setSelectedAim(foundAim);
 
-    setSelectedQuote(
-      selectedCategory?.quotes.find((quote) => quote.id === selectedQuoteId?.id)
+      setTopicCount(findMaxTopicCount());
+    }
+  }, [selectedAimId, findMaxTopicCount]);
+
+  useEffect(() => {
+    setSelectedTopic(
+      aims
+        .find((aim, index) => index === selectedAimId)
+        ?.topics.find((top, index) => {
+          const foundIndex = index === selectedTopic?.id;
+          return foundIndex;
+        })
     );
-  }, [selectedQuoteId]);
+  }, [selectedAimId, selectedTopic]);
 
   return (
     <div className={styles['gwb']}>
@@ -45,18 +74,16 @@ export default function App() {
           height="50%"
         >
           {categories.map((category, index) => {
-            const sorted = category.quotes.sort((a, b) => b.id - a.id);
-            console.log(category.id, sorted);
-
             return (
               <Category
-                label={category.name}
+                name={category.name}
                 description={category.description}
-                quotes={category.quotes.sort((a, b) => b.id - a.id)}
+                topics={findTopicsPerCategory(category.id).sort(
+                  (a, b) => b.id - a.id
+                )}
                 id={category.id}
-                quoteCount={quoteCount}
-                selected={selectedQuoteId}
-                setSelected={setSelectedQuoteId}
+                subjectCount={subjectCount}
+                setSelectedTopic={setSelectedTopic}
                 key={index}
               />
             );
@@ -81,7 +108,7 @@ export default function App() {
         >
           {aims.map((aim, index) => (
             <Aim
-              label={aim}
+              label={aim.name}
               index={index}
               key={index}
               selected={selectedAimId}
@@ -97,10 +124,10 @@ export default function App() {
             fill="#fff"
           />
           <text x={50} y={2.5} fontSize={2.25} textAnchor="middle">
-            Gemeinwohl-
+            Quartiers-
           </text>
           <text x={50} y={5} fontSize={2.25} textAnchor="middle">
-            quartiers-
+            gemeinwohl-
           </text>
           <text x={50} y={7.5} fontSize={2.25} textAnchor="middle">
             index
@@ -108,11 +135,11 @@ export default function App() {
         </svg>
       </div>
 
-      {selectedQuoteId && (
+      {selectedTopic && (
         <Quote
-          title={selectedQuote?.title}
-          text={selectedQuote?.text}
-          onClose={() => setSelectedQuoteId(undefined)}
+          title={selectedTopic.title}
+          quotes={selectedTopic.quotes}
+          onClose={() => setSelectedTopic(undefined)}
         />
       )}
     </div>

@@ -22,7 +22,7 @@
 
     @media screen and (min-width: 400px) {
       width: auto;
-      max-width: 368px;
+      max-width: 420px;
       padding: 24px;
     }
 
@@ -52,6 +52,12 @@
             fill: $color-primary-400;
           }
         }
+      }
+    }
+
+    &__content {
+      &__quote {
+        font-size: 20px;
       }
     }
   }

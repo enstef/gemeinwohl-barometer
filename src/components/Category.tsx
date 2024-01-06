@@ -2,119 +2,137 @@ import { Dispatch, SetStateAction } from 'react';
 import styles from '@/components/category.module.scss';
 
 interface Props {
-  label: string;
+  name: string;
   description: string;
-  quotes: { title: string; id: number }[];
+  topics: Topic[];
   id: number;
-  quoteCount: number;
-  selected: { id: number; categoryId: number } | undefined;
-  setSelected: Dispatch<
-    SetStateAction<{ id: number; categoryId: number } | undefined>
-  >;
+  subjectCount: number;
+  setSelectedTopic: Dispatch<SetStateAction<Topic | undefined>>;
 }
 
 export default function Category({
-  label,
+  name,
   description,
-  quotes,
+  topics,
   id,
-  quoteCount,
-  selected,
-  setSelected,
+  subjectCount,
+  setSelectedTopic,
 }: Props) {
   const index = id - 1;
 
   const degree = index * 36;
 
-  const quotedegrees = (cirle: 'outer' | 'inner', quoteId: number) => {
+  const radius = (cirle: 'outer' | 'inner', subId: number) => {
     if (cirle === 'outer') {
-      return (50 / quoteCount) * quoteId;
+      return (46 / subjectCount) * subId;
     }
     if (cirle === 'inner') {
-      return (50 / quoteCount) * (quoteId - 1);
+      return (46 / subjectCount) * (subId - 1);
     }
   };
 
   return (
     <svg viewBox="25 0 50 50" className={styles['gwb-category']}>
-      {quotes.map((quote) => (
-        <g
-          className={styles['gwb-category__quote']}
-          style={{
-            transformOrigin: 'bottom right',
-            clipPath: 'url(#clip-triangle)',
-          }}
-          transform={`rotate(${degree})`}
-          key={quote.id}
-        >
-          <defs>
-            <clipPath id="clip-triangle">
-              <path
-                d="M50 50H0c0-10.98 3.54-21.13 9.55-29.38L50 50Z"
-                fill="none"
-                stroke="#fff"
-                strokeWidth={0.2}
-              />
-            </clipPath>
-            <mask id="hole">
-              <rect width="100%" height="100%" fill="white" />
-              <circle
-                id="inner"
-                cx={50}
-                cy={50}
-                r={quotedegrees('inner', quote.id)}
-                fill="#000"
-              />
-            </mask>
-          </defs>
+      {topics.map((top) => {
+        return (
+          <g
+            className={styles['gwb-category__quote']}
+            style={{
+              transformOrigin: 'bottom right',
+              clipPath: 'url(#clip-triangle)',
+            }}
+            transform={`rotate(${degree})`}
+            key={top.id}
+          >
+            <defs>
+              <clipPath id="clip-triangle">
+                <path
+                  d="M50 50H0c0-10.98 3.54-21.13 9.55-29.38L50 50Z"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth={0.2}
+                />
+              </clipPath>
+              <mask id="hole">
+                <rect width="100%" height="100%" fill="white" />
+                <circle
+                  id="inner"
+                  cx={50}
+                  cy={50}
+                  r={radius('inner', top.id)}
+                  fill="#000"
+                />
+              </mask>
 
-          {/* <circle
-            cx={50}
-            cy={50}
-            r={quotedegrees('outer', i)}
-            stroke="#fff"
-            strokeWidth={0.2}
-            fill="none"
-          /> */}
-          <circle
-            className={
-              styles[
-                `${
-                  index % 2 === 1
-                    ? 'gwb-category__quote__circle--blue'
-                    : 'gwb-category__quote__circle--pink'
-                }`
-              ]
-            }
-            id="outer"
-            mask={quote.id === 1 ? '' : 'url(#hole)'}
-            cx={50}
-            cy={50}
-            r={quotedegrees('outer', quote.id)}
-            stroke="#fff"
-            strokeWidth={0.2}
-            onClick={() => setSelected({ id: quote.id, categoryId: id })}
-          />
-        </g>
-      ))}
+              <path
+                //prettier-ignore
+                d={`
+                  M ${51 - radius('outer', top.id)!}, 50 
+                  a ${radius('outer', top.id)},${radius('outer',top.id)} 0 1,1 ${radius('outer', top.id)! * 2},0 
+                  a ${radius('outer',top.id)},${radius('outer', top.id)} 0 1,1 -${radius('outer', top.id)! * 2},0
+                `}
+                id={`textPath${top.id}`}
+              />
+            </defs>
+            <circle
+              className={
+                styles[
+                  `${
+                    index % 2 === 1
+                      ? 'gwb-category__quote__circle--blue'
+                      : 'gwb-category__quote__circle--pink'
+                  }`
+                ]
+              }
+              id="outer"
+              mask={top.id === 1 ? '' : 'url(#hole)'}
+              cx={50}
+              cy={50}
+              r={radius('outer', top.id)}
+              stroke="#fff"
+              strokeWidth={0.2}
+              onClick={() => setSelectedTopic(top)}
+            />
+
+            <text
+              x={1.3}
+              fill="#fff"
+              fontSize={2.3}
+              className={styles['gwb-category__quote__text']}
+            >
+              <textPath
+                alignmentBaseline="before-edge"
+                xlinkHref={`#textPath${top.id}`}
+              >
+                {top.title}
+              </textPath>
+            </text>
+          </g>
+        );
+      })}
 
       <g
         style={{
           transformOrigin: 'bottom right',
           textTransform: 'uppercase',
         }}
-        transform={
-          index < 3 ? `rotate(${degree})` : `rotate(${degree}) scale(-1,-1)`
-        }
+        transform={`rotate(${degree})`}
       >
-        <text
-          className={styles['gwb-category__text']}
-          x={index < 3 ? 2 : 98}
-          y={index < 3 ? 48 : 54}
-          fontSize={3}
-          textAnchor={index < 3 ? 'start' : 'end'}
-        >
-          {label}
+        <defs>
+          <path
+            //prettier-ignore
+            d="
+            M 0,50
+            a 50,50 0 1,1 100,0
+            a 50,50 0 1,1 -100,0
+          "
+            id="titlePath"
+          />
+        </defs>
+        <text x={2} fontSize={3}>
+          <textPath alignmentBaseline="before-edge" xlinkHref="#titlePath">
+            {name}
+          </textPath>
         </text>
       </g>
     </svg>

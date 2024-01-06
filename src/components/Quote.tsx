@@ -2,11 +2,11 @@ import Close from '@/assets/icons/Close';
 import styles from '@/components/quote.module.scss';
 
 interface Props {
-  title?: string;
-  text?: string;
+  title: string;
+  quotes: string[];
   onClose: () => void;
 }
-export default function Quote({ title, text, onClose }: Props) {
+export default function Quote({ title, quotes, onClose }: Props) {
   return (
     <div className={styles['gwb-quote']}>
       <div className={styles['gwb-quote__popup']}>
@@ -19,7 +19,16 @@ export default function Quote({ title, text, onClose }: Props) {
             <Close />
           </button>
         </div>
-        <p>{text}</p>
+        <div className={styles['gwb-quote__popup__content']}>
+          {quotes.map((quote, index) => (
+            <p
+              className={styles['gwb-quote__popup__content__quote']}
+              key={index}
+            >
+              &quot;{quote}&quot;
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
