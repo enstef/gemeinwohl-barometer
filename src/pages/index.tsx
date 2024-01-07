@@ -50,19 +50,6 @@ export default function App() {
     }
   }, [selectedAimId, findMaxTopicCount]);
 
-  useEffect(() => {
-    if (selectedTopic) return;
-
-    setSelectedTopic(
-      aims
-        .find((aim, index) => index === selectedAimId)
-        ?.topics.find((top, index) => {
-          const foundIndex = index === selectedTopic?.id;
-          return foundIndex;
-        })
-    );
-  }, [selectedAimId, selectedTopic]);
-
   return (
     <div className={styles['gwb']}>
       <div className={styles['gwb-wrap']}>
