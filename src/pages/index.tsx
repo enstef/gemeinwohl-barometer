@@ -2,15 +2,13 @@ import styles from './index.module.scss';
 import Aim from '@/components/Aim';
 import Category from '@/components/Category';
 import Quote from '@/components/Quote';
-import { use, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { aims, categories } from '@/data';
 
 export default function App() {
   const [selectedAimId, setSelectedAimId] = useState<number>(0);
   const [selectedAim, setSelectedAim] = useState<Aim>(aims[0]);
-  const [selectedTopicId, setSelectedTopicId] = useState<number | undefined>();
   const [selectedTopic, setSelectedTopic] = useState<Topic | undefined>();
-
   const [subjectCount, setTopicCount] = useState<number>(0);
 
   const findTopicsPerCategory = useCallback(
@@ -53,6 +51,8 @@ export default function App() {
   }, [selectedAimId, findMaxTopicCount]);
 
   useEffect(() => {
+    if (selectedTopic) return;
+
     setSelectedTopic(
       aims
         .find((aim, index) => index === selectedAimId)
@@ -83,6 +83,7 @@ export default function App() {
                 )}
                 id={category.id}
                 subjectCount={subjectCount}
+                selectedAim={selectedAim.name}
                 setSelectedTopic={setSelectedTopic}
                 key={index}
               />
