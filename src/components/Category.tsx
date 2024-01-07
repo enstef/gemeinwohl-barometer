@@ -7,6 +7,7 @@ interface Props {
   topics: Topic[];
   id: number;
   subjectCount: number;
+  selectedAim: string;
   setSelectedTopic: Dispatch<SetStateAction<Topic | undefined>>;
 }
 
@@ -16,19 +17,23 @@ export default function Category({
   topics,
   id,
   subjectCount,
+  selectedAim,
   setSelectedTopic,
 }: Props) {
   const index = id - 1;
 
   const degree = index * 36;
 
-  const radius = (cirle: 'outer' | 'inner', subId: number) => {
-    if (cirle === 'outer') {
-      return (46 / subjectCount) * subId;
-    }
-    if (cirle === 'inner') {
-      return (46 / subjectCount) * (subId - 1);
-    }
+  const getRadius = (subId: number) => {
+    let radius = 46;
+
+    const area = Math.PI * Math.pow(radius, 2) * (1 / 10) * subjectCount;
+
+    radius = Math.sqrt(((area / subId) * 10) / Math.PI);
+
+    radius = (radius / subjectCount) * subId;
+
+    return radius;
   };
 
   return (
@@ -53,25 +58,14 @@ export default function Category({
                   strokeWidth={0.2}
                 />
               </clipPath>
-              <mask id="hole">
-                <rect width="100%" height="100%" fill="white" />
-                <circle
-                  id="inner"
-                  cx={50}
-                  cy={50}
-                  r={radius('inner', top.id)}
-                  fill="#000"
-                />
-              </mask>
-
               <path
                 //prettier-ignore
                 d={`
-                  M ${51 - radius('outer', top.id)!}, 50 
-                  a ${radius('outer', top.id)},${radius('outer',top.id)} 0 1,1 ${radius('outer', top.id)! * 2},0 
-                  a ${radius('outer',top.id)},${radius('outer', top.id)} 0 1,1 -${radius('outer', top.id)! * 2},0
+                  M ${51 - getRadius(top.id)!}, 50 
+                  a ${getRadius(top.id)},${getRadius(top.id)} 0 1,1 ${getRadius(top.id)! * 2},0 
+                  a ${getRadius(top.id)},${getRadius(top.id)} 0 1,1 -${getRadius(top.id)! * 2},0
                 `}
-                id={`textPath${top.id}`}
+                id={`textPath${selectedAim}${top.id}`}
               />
             </defs>
             <circle
@@ -88,7 +82,7 @@ export default function Category({
               mask={top.id === 1 ? '' : 'url(#hole)'}
               cx={50}
               cy={50}
-              r={radius('outer', top.id)}
+              r={getRadius(top.id)}
               stroke="#fff"
               strokeWidth={0.2}
               onClick={() => setSelectedTopic(top)}
@@ -99,10 +93,11 @@ export default function Category({
               fill="#fff"
               fontSize={2.3}
               className={styles['gwb-category__quote__text']}
+              onClick={() => setSelectedTopic(top)}
             >
               <textPath
                 alignmentBaseline="before-edge"
-                xlinkHref={`#textPath${top.id}`}
+                xlinkHref={`#textPath${selectedAim}${top.id}`}
               >
                 {top.title}
               </textPath>
