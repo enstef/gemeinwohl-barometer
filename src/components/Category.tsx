@@ -21,36 +21,41 @@ export default function Category({
   setSelectedTopic,
 }: Props) {
   const index = id - 1;
-
   const degree = index * 36;
+  const sanitizedAim = selectedAim.replaceAll(' ', '');
 
   const getRadius = (subId: number) => {
     let radius = 46;
-
     const area = Math.PI * Math.pow(radius, 2) * (1 / 10) * subjectCount;
 
     radius = Math.sqrt(((area / subId) * 10) / Math.PI);
-
     radius = (radius / subjectCount) * subId;
 
     return radius;
   };
 
+  const getText = (text: string) => {
+    let lines = text.split('\n');
+    return lines;
+  };
+
   return (
     <svg viewBox="25 0 50 50" className={styles['gwb-category']}>
       {topics.map((top) => {
+        const lines = getText(top.title);
+
         return (
           <g
             className={styles['gwb-category__quote']}
             style={{
               transformOrigin: 'bottom right',
-              clipPath: 'url(#clip-triangle)',
+              clipPath: `url(#clip-triangle${sanitizedAim}${index})`,
             }}
             transform={`rotate(${degree})`}
             key={top.id}
           >
             <defs>
-              <clipPath id="clip-triangle">
+              <clipPath id={`clip-triangle${sanitizedAim}${index}`}>
                 <path
                   d="M50 50H0c0-10.98 3.54-21.13 9.55-29.38L50 50Z"
                   fill="none"
@@ -59,13 +64,13 @@ export default function Category({
                 />
               </clipPath>
               <path
+                id={`textPath${sanitizedAim}${top.id}`}
                 //prettier-ignore
                 d={`
                   M ${51 - getRadius(top.id)!}, 50 
                   a ${getRadius(top.id)},${getRadius(top.id)} 0 1,1 ${getRadius(top.id)! * 2},0 
                   a ${getRadius(top.id)},${getRadius(top.id)} 0 1,1 -${getRadius(top.id)! * 2},0
                 `}
-                id={`textPath${selectedAim}${top.id}`}
               />
             </defs>
             <circle
@@ -88,20 +93,26 @@ export default function Category({
               onClick={() => setSelectedTopic(top)}
             />
 
-            <text
-              x={1.3}
-              fill="#fff"
-              fontSize={2.3}
-              className={styles['gwb-category__quote__text']}
-              onClick={() => setSelectedTopic(top)}
-            >
-              <textPath
-                alignmentBaseline="before-edge"
-                xlinkHref={`#textPath${selectedAim}${top.id}`}
+            {lines.map((text, index) => (
+              <text
+                className={styles['gwb-category__quote__text']}
+                x={(getRadius(top.id) * Math.PI * 0.98) / 10}
+                dy={index * 2.5}
+                textAnchor="middle"
+                fontSize={2.2}
+                letterSpacing={index * 0.1}
+                fill="#fff"
+                onClick={() => setSelectedTopic(top)}
+                key={index}
               >
-                {top.title}
-              </textPath>
-            </text>
+                <textPath
+                  dominantBaseline="text-before-edge"
+                  xlinkHref={`#textPath${sanitizedAim}${top.id}`}
+                >
+                  {text}
+                </textPath>
+              </text>
+            ))}
           </g>
         );
       })}
@@ -117,15 +128,15 @@ export default function Category({
           <path
             //prettier-ignore
             d="
-            M 0,50
-            a 50,50 0 1,1 100,0
-            a 50,50 0 1,1 -100,0
-          "
+              M 0,50
+              a 50,50 0 1,1 100,0
+              a 50,50 0 1,1 -100,0
+            "
             id="titlePath"
           />
         </defs>
-        <text x={2} fontSize={3}>
-          <textPath alignmentBaseline="before-edge" xlinkHref="#titlePath">
+        <text x={(50 * Math.PI) / 10} textAnchor="middle" fontSize={3}>
+          <textPath dominantBaseline="text-before-edge" xlinkHref="#titlePath">
             {name}
           </textPath>
         </text>
