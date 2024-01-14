@@ -54,14 +54,14 @@ export const aims: Aim[] = [
       {
         categoryId: 5,
         id: 2,
-        title: 'Verwendung von Regenwasser',
+        title: 'Verwendung von\n Regenwasser',
         quotes: [
           'Ich weiß, dass das machbar ist, Regenwasser zu verwenden. Weil ich Klempner bin, weiß ich, dass es da gute Möglichkeiten gibt. Aber das liegt dann nicht an den Mietern, sondern an den Vermietern.',
         ],
       },
       {
         categoryId: 4,
-        title: 'Vernetzung mit Klimabezug',
+        title: 'Vernetzung mit\n Klimabezug',
         id: 1,
         quotes: [
           'It is so nice that we can organize some stuff together and talk about important issues and climate. And sometimes I download “Na dann?”and  there is an app that connects you with your neighborhood. So I am connected to that as well. Sometimes they gather and we do yoga and talk about how we could be more sustainable or separate the trash and sometimes we find important things and remind everyone to separate their trash. We show all the respect.',
@@ -79,7 +79,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Raumkonflikt mit Verkehrsnutzung',
+        title: 'Raumkonflikt mit\n Verkehrsnutzung',
         quotes: [
           'An sich gibt es oder gab es hier in den Innenhöfen auch immer wieder Gärten. Zum Teil sind die leider zugepflastert worden. Das ist in der Querstraße, gerade in den letzten 10 Jahren, dass das zugenommen hat, dass da Parkplätze geschaffen werden und dann wird gepflastert.',
         ],
@@ -91,7 +91,7 @@ export const aims: Aim[] = [
     topics: [
       {
         categoryId: 1,
-        id: 1,
+        id: 2,
         title: 'Sanitäre Anlagen',
         quotes: [
           'Es riecht ganz gut nach Pipi hier die Ecke und wenn man auf dem Spielplatz ist, dann ist es etwas blöd.',
@@ -100,7 +100,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 1,
-        id: 2,
+        id: 1,
         title: 'Vermüllung',
         quotes: [
           'Hier ist es einigermaßen schmutzig. Aber hier sind auch oft Leute, die ihren Dreck hinterlassen. Also zu sauber ist es auch nicht. Ich nehme Dreck im Allgemeinen nicht als Problem wahr. Außer, wenn Lärmverschmutzung auch dazu zählt. Es ist auf jeden Fall zu laut.',
@@ -111,7 +111,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 1,
+        id: 2,
         title: 'Pflege öffentlicher Räume',
         quotes: [
           'Ansonsten haben wir an Grünflächen eher weniger. Aber das Spielplatzangebot hier für Kinder ist ganz solide in der Stadt. Aber es könnte auch noch... Also wir haben den Kanal, der gut abgebrannt und teilweise verdreckt ist, weil der sehr viel genutzt wird. Da könnte es noch mehr Pflege geben und noch mehr Mülltonnen. Da könnte nach der Baustelle auch was verbessert werden. Aber der ist stark genutzt und stark abgenutzt.',
@@ -121,8 +121,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 2,
-        title: 'Bedürfnisse der Viertelkultur',
+        id: 1,
+        title: 'Bedürfnisse der\n Viertelkultur',
         quotes: [
           'Ja, das gehört dazu, weil allgemein in Deutschland – auch in Münster – ist es leider so, dass es wenig öffentliche Toiletten gibt. Ziemlich viele Bars, die aber keine Toilette haben, oder schreiben „Nur für Besucher, die hier was kaufen“. Und die Kiosk-Kultur, die stört das dann schon ein bisschen, dass man immer eine Toilette braucht.',
         ],
@@ -130,7 +130,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Angemessene Sauberkeit',
+        title: 'Angemessene\n Sauberkeit',
         quotes: [
           'Ich finde das eigentlich in dem Maß, wie es sauber ist, angenehm. Also nicht steril sauber. Aber muss es auch meiner Meinung nach nicht sein.',
         ],
@@ -138,7 +138,7 @@ export const aims: Aim[] = [
       {
         categoryId: 2,
         id: 1,
-        title: 'Bürger:inneninitiativen zur Pflege des Viertels',
+        title: 'Bürger:inneninitiativen\nzur Pflege des\nViertels',
         quotes: [
           'Also ich nehme es weder als besonders schmutzig, noch besonders sauber wahr. Ich habe auch das Gefühl, dass es Aktionen gibt wie „Hansa räumt auf“. Also ich glaube, dass es vor allem in diesem Stadtteil, vor allem wenn es Richtung Kanal geht, viele Initiativen von Bürger:innen gibt, die sagen: “Wir treffen uns nachmittags und dann gehen wir Müll sammeln.“ Das finde ich eher sichtbar. Also, dass es hier mehr Menschen gibt, die sich dafür interessieren, dass es sauberer wird.',
         ],
@@ -146,7 +146,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Folgen verschiedener Nutzung',
+        title: 'Folgen verschiedener\n Nutzung',
         quotes: [
           'Natürlich stört mich Sauberkeit nicht. Aber es ist schon ganz schön zugemüllt manchmal. Auch vom Sperrmüll, denn da liegen Sachen auf dem Sperrmüll, die da nicht hingehören.',
           'Es gibt ein paar mehr Scherben. Unter der Bedingung fehlt die Rücksichtnahme auf Andere, also man könnte bei den Kneipen im Viertel mehr Rücksicht nehmen auf andere, wo ich selber Fahrrad fahre oder diejenigen auch selber Fahrrad fahren. Und manchmal liegt überall Müll herum, das verstehe ich nicht.',
@@ -203,7 +203,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Alternativen zum Auto',
+        title: 'Alternativen\n zum Auto',
         quotes: [
           'Ich sehe es häufiger am Hansaplatz, dass da diese Car Sharing Autos stehen. Da sind ausgewiesene Flächen.',
           'Bushaltestelle, Bahnhof, Fahrrad. Das ist eigentlich perfekt hier.',
@@ -231,7 +231,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Konflikte durch Autoverkehr',
+        title: 'Konflikte durch\n Autoverkehr',
         quotes: [
           'Aber in Bezug auf andere Leute ist es schon so, dass die Autos sehr nah an den anderen Leuten, wie Fahrradfahrern, vorbeifahren. Und wenn man älter ist oder auch jünger, dann ist es eine Einschränkung oder eine Gefahr vielerorts.',
           'Gut. Es ist ein lebhaftes Viertel. Und das gehört auch irgendwie dazu. Klar. Verkehr auch, zu einem gewissen Maße. Aber den kann man besser regulieren.',
@@ -251,7 +251,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 1,
-        title: 'Unnachhaltige Strukturen',
+        title: 'Unnachhaltige\n Strukturen',
         quotes: [
           'Nachhaltiges Viertel? Das ist eine schwierige Frage. Nein, ich glaube nicht. Ich glaube das trifft auf fast keinen Aspekt der Gesellschaft zu. Nicht im allergeringsten. Nicht so, wie es sein sollte.',
           'Also verkehrsmäßig finde ich, es ist zu viel Verkehr; zu sehr am Auto orientiert.',
@@ -270,7 +270,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Nachhaltiger Konsum',
+        title: 'Nachhaltiger\n Konsum',
         quotes: [
           'Ich sehe es häufiger am Hansaplatz, dass da diese Car Sharing Autos stehen. Da sind ausgewiesene Flächen.',
           'Was eigentlich schön ist, dass Bioläden, oder wo man einkaufen kann oder auch ein kleiner Markt hier an der Hubertistraße, dass das auch gut erreichbar ist und man für die Lebenshaltung auch die Möglichkeit hat, die Dinge zu besorgen, die das im Blick haben.',
@@ -289,7 +289,7 @@ export const aims: Aim[] = [
       {
         categoryId: 2,
         id: 1,
-        title: 'Offenheit gegenüber Nachhaltigkeit',
+        title: 'Offenheit gegenüber\n Nachhaltigkeit',
         quotes: [
           'Ich denke schon, dass es im Viertel und in Münster sowieso, als Fahrradstadt, zutrifft, dass viele Leute sich bemühen, Fahrrad zu fahren oder andere Verkehrsmittel zu nutzen.',
         ],
@@ -297,7 +297,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Unnachhaltige Planung',
+        title: 'Unnachhaltige\n Planung',
         quotes: [
           'Für nachhaltig halte ich es nicht, alleine vom Verkehr her. Das Hansaviertel ist überlastet und wird unnötig durch das neue Bauprojekt „Edeka“ in der Zukunft noch mehr belastet, als es heute eh schon ist. Ich sehe keinen Sinn darin, da einen Supermarkt hinzubringen. Das bringt noch mehr Verkehr als jetzt. Vielleicht sollte man einen Markt bauen, in dem keine Autoparkplätze vorhanden sind, sondern nur Fahrradparkplätze für das Viertel, das wär’ mal eine Idee.',
         ],
@@ -310,7 +310,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 1,
-        title: 'KiTa-Betreuungsangebot',
+        title: 'KiTa-Betreuungs-\nangebot',
         quotes: [
           'Wir haben auch Kinder hier im Viertel bekommen. Ich muss sagen, für uns Münsteraner mit guten Jobs und Vernetzung war das super. Aber ich weiß trotzdem aus Erfahrung von Bekannten oder Zugezogenen, dass es durchaus gerne mehr Angebote geben dürfte. Also deutlich mehr, gerade im Bereich frühes Kind und Kindesalter. Ich glaube, dass die Familien sich gut aufgehoben fühlen, ist zum Großteil erfüllt, aber das liegt einfach daran, dass die Leute es nicht anders gewohnt sind.',
           'Das, was immer fehlt, sind KiTa-Betreuungen. Oder Betreuung für Kinder unter 3 oder unter 6. Das hat mein Mann vielleicht schon angedeutet. Da bin ich selber schon ein bisschen an so einem kleinen Projekt dran, um eine Tagespflegestelle aufzumachen. Sehr schwierig. Parkplätze sind Parkplätze und egal ob das jetzt ein schöner Garten ist, wo dann auch Kinder betreut werden können. Das ist schwierig.',
@@ -319,7 +319,7 @@ export const aims: Aim[] = [
       {
         categoryId: 5,
         id: 1,
-        title: 'Familienfreundliche Angebote',
+        title: 'Familienfreundliche\n Angebote',
         quotes: [
           'Und in der Altersgruppe von 0 bis, zu den ersten Teenager-Jahren geht das von Kitas mit entsprechendem Ganztags-Angebot, über Grundschulen und Auswahlmöglichkeiten innerhalb des Viertels, ohne dass die Eltern und Kinder genötigt sind, das Viertel zu verlassen. Spielplätze und Flächen für Familien, die sind zwar grundsätzlich da, aber ich weiß nicht, ob das im ausreichenden Maße ist.',
         ],
@@ -335,7 +335,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Ausreichendes schulisches Bildungsangebot',
+        title: 'Schulisches\n Bildungsangebot',
         quotes: [
           'Zu Bildung fällt mir jetzt spontan, obwohl das aus dem Hansaviertel schon etwas heraus ist, das Kreativhaus ein. Für mich ist es insofern ausreichend, weil ich das nicht zwingend im Viertel brauche.',
           'Da hinten ist das Schulzentrum. Da ist die Versorgung ganz gut. Kitas sind hier auch mehrere. Da ist die Dichte glaube ich ausreichend. Im Sinne von, dass das nicht oft ganz oben auf der Liste der Beschwerden stehen müsste.',
@@ -344,7 +344,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 2,
-        title: 'Erreichbarkeit von Bildungsangeboten',
+        title: 'Erreichbarkeit von\n Bildungsangeboten',
         quotes: [
           'Ich finde schon, dass hier in der näheren Umgebung für Kinder und Schüler und natürlich auch für die Studenten alles gut erreichbar ist. Es gibt auch für die Kleinkinderbetreuung genügend Stellen. Also viele Stellen, aber nicht genügend. Und dadurch, dass es da so stadtnah ist kann man auch mit der Weiterbildung an der Volkshochschule, dem Anna-Krückmann-Haus, hier alles fußläufig erreichen. Finde ich schon sehr gut aufgestellt.',
         ],
@@ -365,7 +365,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 1,
-        title: 'Diskriminierung der Szene',
+        title: 'Diskriminierung\n der Szene',
         quotes: [
           'Aus meiner Position heraus bin ich nicht wirklich Bestandteil der Gruppe, die in irgendeiner Form diskriminiert wird. Ich habe schon den Eindruck, dass es um den Bahnhof herum in Bezug auf Gerechtigkeitsfragen relativ problematisch ist.',
           'Am Bahnhof finden immer wieder Razzien statt, in Bezug zu den Leuten vor Ort. Wegen der Szene, die da nun mal ist, und teilweise auf Basis von Herkunft, werden da Razzien durchgeführt. Und das ist schon ein Problem.',
@@ -374,7 +374,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 2,
-        title: 'Ungerechte Wohnverhältnisse',
+        title: 'Ungerechte\n Wohnverhältnisse',
         quotes: [
           'Ich meine, wie die strukturellen Themen hat man es überall in Bezug auf Wohnungsmarkt, Wohnungsknappheit, dass halt bestimmte Gruppen benachteiligt werden. Aber ich weiß nicht, ob das akut ein Hansaviertel-Problem ist. Vielleicht hier besonders, weil der Wohnungsdruck besonders hoch ist.',
           'Man hat ein strukturelles Unterangebot an Wohnraum und dadurch verstärken sich die Selektionsprozesse in Auswahl von Leuten, die eine Wohnung suchen. Dann kommen Variablen oder Themen wie Herkunft dann verstärkt durch und führen halt dazu, dass Leute, die jetzt keinen deutschen Nachnamen haben, halt da einen noch schwereren Zugang haben, als es sowieso schon der Fall ist.',
@@ -385,7 +385,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 3,
-        title: 'Top-down-Planung',
+        title: 'Top-Down-Planung',
         quotes: [
           'Wenn bauliche Veränderungen anstehen, am Hansaplatz beispielsweise, da würde ich sagen, die wirkliche aktive Mitgestaltungsmöglichkeit ist schon das non plus ultra, wenn das gegeben wäre. Und das sehe ich gerade nur teilweise. Zumindest von offiziellen Stellen, die die Entscheidung haben bei Bautätigkeiten z.B., ist es nicht so wirklich gegeben.',
           'Diese Neubauprojekte am Hafen. Das droht immer eine Edelbebauung zu werden. Stichwort Gentrifizierung: Wenn sowas droht, ist das nicht so gut. Endgültig ist das ja auch nicht geklärt, wie das dort weiter geht.',
@@ -393,8 +393,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 1,
-        title: 'Offenheit für Bottom-Up-Planung',
+        id: 2,
+        title: 'Offenheit für\n Bottom-Up-Planung',
         quotes: [
           'Ich glaube, es müsste eine andere Offenheit von Politik und Verwaltung für Bottom-Up-Initiativen, für Planungsansätze von unten, für die geäußerten Bedürfnisse von den Leuten, die hier wohnen, da sein. Dass man stärker drauf eingeht und das wirklich als Grundvoraussetzung in die eigene Planung und für das eigene Handeln stärker mit einbezieht.',
           'Die wirkliche aktive Mitgestaltungsmöglichkeit ist schon das non plus ultra, wenn das gegeben wäre. Und das sehe ich gerade nur teilweise. Zumindest von offiziellen Stellen, die die Entscheidung haben, bei Bautätigkeiten z.B. ist es jetzt nicht so wirklich gegeben.',
@@ -402,8 +402,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 2,
-        title: 'Zugang zu ruhigen Orten',
+        id: 1,
+        title: 'Zugang zu ruhigen\n Orten',
         quotes: [
           'Das Bewegen vor der eigenen Haustür ist nicht so einfach möglich, weil es kaum ruhige Straßen gibt, die nicht mit Autos befahren sind, wo nicht Verkehrsgefahren drohen. Es gibt nicht so viele Grünflächen, was auch für mittelalte Menschen ein Manko ist. Es gibt wenige Orte, wo man einfach rausgehen kann, weil das Viertel ja auch durch Mietwohnungen geprägt ist, die auch nicht alle einen Balkon und einen Garten haben und wo es schön wäre, Grünflächen zu haben. Die man dann auch nutzen kann, die hier aber wenig vorhanden sind.',
         ],
@@ -411,7 +411,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Soziale Organisationen',
+        title: 'Soziale Orga-\nnisationen',
         quotes: [
           'Es gibt da schon sehr zielgruppenorientierte Initiativen, wie die Wohnungslosenhilfe oder das Indro oder gerade jetzt auch für die Werkstattverfahren um den Bremer Platz. Dann das Odak. Also es gibt soziale Träger:innen, die schon sehr zielorientiert sind und da glaube ich auch, dass die Stimmen vertreten werden können.',
         ],
@@ -419,7 +419,7 @@ export const aims: Aim[] = [
       {
         categoryId: 2,
         id: 1,
-        title: 'Politisches Gesundheitsverständnis',
+        title: 'Politisches Ge-\nsundheitsver-\nständnis',
         quotes: [
           'Gesundheitsförderung würde gerade auf der kommunalen Ebene gesehen und wird auch aktuell auf der wissenschaftlichen Ebene kommunal angegangen. Da gibt es gerade ein Projekt, das im Hansaviertel agiert, aber auch auf der gesamtstädtischen Ebene versucht, ein langfristiges Handlungsprogramm umzusetzen. Das, würde ich sagen, ist ein Lösungsweg, der nicht ganz perfekt ist. Weil der immer noch in kommunale Strukturen eingebunden ist und nicht die hunderprozentige Lösung für ärmere Menschen in einem Viertel ist, weil es einfach kein Projekt sein wird, was mehr finanzielle Gleichheit herstellen kann.',
         ],
@@ -427,7 +427,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Ungleiche Entscheidungsmacht',
+        title: 'Ungleiche Ent-\nscheidungs-\nmacht',
         quotes: [
           'Solche prozessplanerischen, stadtteilpolitischen Entscheidungen sind immer ein langer Weg. Und dass man daher nicht das bekommt, was man haben möchte, ist klar.',
           'Die Stadt und der Städtebau sollten als Ganzes gedacht werden und nicht als die Verteilung von Wohnung und öffentlichen Räumen, die das Gemeinwohl nutzen und Privatunternehmen als prozentualer Anteil am Städtebau gleicher gestellt sind.',
@@ -442,7 +442,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 1,
-        title: 'Diskriminierung aufgrund des Lebensstils',
+        title: 'Diskriminierung\n aufgrund des\n Lebens-\nstils',
         quotes: [
           'Aus meiner Position heraus bin ich nicht wirklich Bestandteil der Gruppe, die in irgendeiner Form diskriminiert wird. Ich habe schon den Eindruck, dass es um den Bahnhof herum in Bezug auf Gerechtigkeitsfragen relativ problematisch ist.',
           'Am Bahnhof finden immer wieder Razzien statt, in Bezug zu den Leuten vor Ort. Wegen der Szene, die da nun mal ist, und teilweise auf Basis von Herkunft, werden da Razzien durchgeführt. Und das ist schon ein Problem.',
@@ -451,7 +451,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 2,
-        title: 'Diskriminierung auf dem Wohnungsmarkt',
+        title: 'Diskriminierung auf\n dem Wohnungs-\nmarkt',
         quotes: [
           'Ich meine, wie die strukturellen Themen hat man es überall so in Bezug auf Wohnungsmarkt, Wohnungsknappheit, dass halt bestimmte Gruppen benachteiligt werden. Aber ich weiß nicht, ob das akut ein Hansaviertel-Problem ist. Vielleicht hier besonders, weil der Wohnungsdruck besonders hoch ist.',
           'Man hat ein strukturelles Unterangebot an Wohnraum und dadurch verstärken sich die Selektionsprozesse in Auswahl von Leuten, die eine Wohnung suchen. Dann kommen Variablen oder Themen wie Herkunft verstärkt durch und führen dazu, dass Leute, die keinen deutschen Nachnamen haben, einen noch schwereren Zugang haben, als es sowieso schon der Fall ist.',
@@ -461,7 +461,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 1,
+        id: 4,
         title: 'Abbau sprachlicher Barrieren',
         quotes: [
           'Ich habe den Eindruck, dass jetzt, z.B. auch durch die Situation in der Ukraine, verstärkt drauf geachtet wird und sprachlich versucht wird, die Leute mehr abzuholen, dadurch, dass viele Angebote auf Ukrainisch formuliert wurden. Und das hätte man, finde ich, schon früher oder könnte man in mehr Bereichen machen von städtischer Seite aus. Oder sollte man machen, weil man sonst einen Großteil der Leute, für die deutsch keine Muttersprache ist, nicht erreicht und das muss der Anspruch sein.',
@@ -471,8 +471,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 2,
-        title: 'Abbau baulicher Barrieren',
+        id: 3,
+        title: 'Abbau baulicher\n Barrieren',
         quotes: [
           'Wenn Neubauten kommen, dass unterschiedliche Generationen dabei sind, halt Ältere, Jüngere, Menschen mit Behinderungen, Menschen ohne Behinderungen, Studenten. Dass das ein bunter Mix ist, weil das langfristig dazu führen kann, dass auch der Wohnungsmarkt, also auch die Preise generell gedrosselt werden.',
           'Einmal, denke ich, gibt es eine gewisse Bausubstanz – und das hatten wir bei uns zu Hause auch – um zu gucken: Wie kann da jemand mit einer Gehbehinderung klarkommen? Da müsste an der bestehenden Bausubstanz nochmal nachgearbeitet werden. Das ist natürlich auch eine Sache der Eigentümer, die sich dann auf den Patt machen müssen, wie man sowas finanzieren kann.',
@@ -481,16 +481,16 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 3,
-        title: 'Inklusives Planen',
+        id: 1,
+        title: 'Inklusives\n Planen',
         quotes: [
           'Ich finde generell, Kreuzungsparken sollte verhindert werden. Es sollten die Parkplätze an den Kreuzungen zu Fahrradparkplätzen umgebaut werden, die könnte man dann mit Bügeln absperren, damit Parken verhindert wird. Das führt dazu, dass Fußgänger, Frauen mit Kinderwägen oder Rollstuhlfahrer besser die Straße überqueren können und man auch eine bessere Einsicht in die Straße hat.',
         ],
       },
       {
         categoryId: 5,
-        id: 4,
-        title: 'Sichtbarkeit vulnerabler Gruppen',
+        id: 2,
+        title: 'Sichtbarkeit vulne-\nrabler Gruppen',
         quotes: [
           'Es gibt viele Menschen in dem Viertel, die nicht von einer Initiative repräsentiert werden oder deren Stimmen halt nicht irgendwo keine Beachtung finden. Sei es bei besonders vulnerablen Gruppen, besonders armen Menschen. Es gibt ja keine besondere Initiative für arme Menschen. Ich glaube, das ist nochmal ein großes Manko in dem Viertel. Oder auch Menschen mit Migrationshintergrund. Es gibt sehr wenige Migrantenselbstorganisationen hier im Viertel. Und wenn, dann sind die sehr ethnienorientiert oder kulturorientiert. Da ist noch Ausbaupotential würde ich sagen.',
         ],
@@ -498,7 +498,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Inklusive Aktionen und Feste',
+        title: 'Inklusive\n Aktionen und\n Feste',
         quotes: [
           'Auf jeden Fall habe ich die Einladung vom Hansaforum damals bekommen und die haben Karten verteilt. Das ist auch immer sehr inklusiv gestaltet. Die Aktionen, die hier stattfinden, um das Viertel und die Lebensqualität zu verbessern, sind schon sehr inklusiv. Das sind aber auch die neueren und moderneren Angebote. Alles organisiert über den Verein.',
         ],
@@ -506,7 +506,7 @@ export const aims: Aim[] = [
       {
         categoryId: 2,
         id: 1,
-        title: 'Wachsende Initiative',
+        title: 'Wachsende\n Initiative',
         quotes: [
           'Das Viertel hat den Ruf und ist, glaube ich, sehr inklusiv gestaltet, auch von den Vereinen, die es gibt: das Hansaforum selbst, die B-Side…',
           'Auf jeden Fall habe ich die Einladung vom Hansaforum damals bekommen und die haben Karten verteilt. Und das ist auch immer sehr inklusiv gestaltet. Die Aktionen, die hier stattfinden, um das Viertel und die Lebensqualität zu verbessern, sind schon sehr inklusiv. Das sind aber auch die neueren und moderneren Angebote. Alles organisiert über den Verein.',
@@ -525,7 +525,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Konflikte zwischen Lebensstilen',
+        title: 'Konflikte\n zwischen\n Lebens-\nstilen',
         quotes: [
           'Manchmal verträgt sich die Klientel nicht so ganz, wenn ich dann mit Kindern auf den Spielplatz gehe, dann bin ich ein bisschen vorsichtiger. Aber ich sag mal, auch das gehört zu einer Durchmischung.',
         ],
@@ -537,8 +537,8 @@ export const aims: Aim[] = [
     topics: [
       {
         categoryId: 1,
-        id: 1,
-        title: 'Diskriminierung aufgrund von Herkunft',
+        id: 3,
+        title: 'Diskriminierung aufgrund\n von Herkunft',
         quotes: [
           'Ich meine, wie die strukturellen Themen hat man es überall in Bezug auf Wohnungsmarkt, Wohnungsknappheit, dass bestimmte Gruppen benachteiligt werden. Aber ich weiß nicht, ob das akut ein Hansaviertel-Problem ist. Vielleicht hier besonders, weil der Wohnungsdruck besonders hoch ist.',
           'Man hat ein strukturelles Unterangebot an Wohnraum und dadurch verstärken sich die Selektionsprozesse in Auswahl von Leuten, die eine Wohnung suchen. Dann kommen Variablen oder Themen wie Herkunft verstärkt durch und führen dazu, dass Leute, die keinen deutschen Nachnamen haben, einen noch schwereren Zugang haben, als es sowieso schon der Fall ist.',
@@ -557,23 +557,23 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 1,
-        id: 3,
-        title: 'Bauliche Barrieren',
+        id: 1,
+        title: 'Bauliche\n Barrieren',
         quotes: [
           'Was ich so generell mitgekriegt habe, ist das Wohnen nicht barrierefrei. Auch bei mir, das ist Sozialbau von der LRG. Das ist nicht im Geringsten barrierefrei, von der Sauberkeit angefangen. Sobald die Leute weniger Geld haben, landen sie in solchen Blöcken.',
         ],
       },
       {
         categoryId: 5,
-        id: 1,
-        title: 'Gerechte Verteilung von Baufläche',
+        id: 2,
+        title: 'Gerechte Verteilung\n von Baufläche',
         quotes: [
           'Gemeinschaftliches Interesse könnte in dem Sinne mitgedacht werden, dass Flächen nicht nur an Privatunternehmen vermietet werden. Also dass die Stadt, der Städtebau, als Ganzes gedacht wird. Und nicht als die Verteilung von Wohnung und öffentlichen Räumen, die das Gemeinwohl nutzen und Privatunternehmen als prozentualer Anteil am Städtebau gleicher gestellt ist.',
         ],
       },
       {
         categoryId: 5,
-        id: 2,
+        id: 1,
         title: 'Durchmischung',
         quotes: [
           'Wenn Neubauten kommen, dass unterschiedliche Generationen dabei sind, Ältere, Jüngere, Menschen mit Behinderungen, Menschen ohne Behinderungen, Studenten. Dass das ein bunter Mix ist, weil das langfristig dazu führen kann, dass auch der Wohnungsmarkt, also auch die Preise generell gedrosselt werden.',
@@ -583,7 +583,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Genossenschaftliches Wohnen',
+        title: 'Genossenschaft-\nliches Wohnen',
         quotes: [
           'Das ist ein attraktives Viertel. Ich selber wohne bei einer Genossenschaft. Das ist gut, sehr gut, bei einer Genossenschaft zu wohnen. Weil die in der Regel die Preise flach halten und auch organisiert sind beim Reparieren. Es ist nicht alles aus Gold, die Wohnungen sind nicht luxuriös, kein Swimmingpool, aber die führen zur Dämpfung des Wohnungsmarkts, insbesondere der Preise.',
         ],
@@ -591,7 +591,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Generationenkonflikte',
+        title: 'Generationen-\nkonflikte',
         quotes: [
           'Die jungen Leute, wegen denen ich dann um halb 2 – wie vor ein paar Wochen – die Polizei rufen musste. Fand ich nicht so toll, weil ich nicht die ewig rumzickende Alte dargeben möchte. Aber es war einfach ein bisschen zu viel. Und was bei uns natürlich auch nicht geht, ist auf der Leererstraße, wo wir ja relativ weit vom Hafen weg sind. Nachts bei offenem Fenster zu schlafen ist unmöglich.',
           'Bei so einer Altersdurchmischung, die viele für gut halten, innerhalb der Immobilie, entsteht eine Art Verdrossenheit bei der älteren Generation gegenüber der jüngeren Generation. Diese sind dann eher nicht bereit, Kompromisse einzugehen. Ich möchte gar nicht draufhauen, aber das ist, was mir da als Erstes zu einfällt.',
@@ -615,7 +615,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 1,
-        title: 'Fehlende Erholungsfläche',
+        title: 'Fehlende Erho-\nlungsfläche',
         quotes: [
           'Auch die Leute, die Balkone haben, die gucken  nicht immer auf die Grünflächen, sondern dann schon auch auf versiegelte Flächen. Ich finde, das könnte mehr sein. Und dann muss man sich fragen, woher könnten die kommen?',
           'Es gibt nicht so viele Grünflächen, was auch für mittelalte Menschen ein Manko ist. Es gibt wenige Orte, wo man einfach rausgehen kann, weil das Viertel durch Mietwohnungen geprägt ist, die auch nicht alle einen Balkon und einen Garten haben und wo es schön wäre, Grünflächen zu haben.',
@@ -624,7 +624,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 1,
+        id: 2,
         title: 'Verkehrseindämmung',
         quotes: [
           'Abwesenheit vom Verkehr, würde ich auf jeden Fall sagen. Verkehr ist ein sehr großer, störender Faktor, wenn es darum geht, Ruhe zu haben, gerade weil ich an der Straße wohne. Grünflächen helfen dabei, sich gut zu fühlen, sich zu erholen und ich würde sagen, das sind die beiden wichtigsten Faktoren.',
@@ -632,8 +632,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 2,
-        title: 'Verschönerung und Pflege des Raumes',
+        id: 3,
+        title: 'Verschönerung und\n Pflege des Raumes',
         quotes: [
           'Es könnten Flächen und Häuser verschönert werden. Da gibt es ein erhebliches Verschönerungspotenzial. Vor allem gegen die Tristheit der Stadt. Wir sind immer noch in der Stadt, auch wenn das ein progressives Viertel ist. Es ist trotzdem trister Betonalltag. In der allgemeinen Wahrnehmung der Grünflächen, was Bepflanzung und Verschönerung der Stadt angeht, ist auf jeden Fall noch viel Verbesserungsbedarf. Auch hier bei der grauen Betonwüste.',
           'Ich hab mitgekriegt, dass hier der Grünbereich, hier der Hansaplatz bisschen fertig gemacht werden soll. Ansonsten gibt’s hier nur das Ostbad. Deswegen ist es auch ein bisschen schade, dass bei dem Hafencenter nicht so richtig was in dem Konzept drin ist mit Erholungsflächen.',
@@ -642,7 +642,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 3,
+        id: 1,
         title: 'Naturnähe',
         quotes: [
           'Ansonsten trägt Lärm auf jeden Fall dazu bei, dass man sich nicht erholen kann. Da, wo es leiser ist und wo man Naturgeräusche hört im Sinne von Vogelgezwitscher. Das nimmt man hier gar nicht wahr, weil man direkt neben der großen Straße sitzt. Aber Ansonsten finde ich Wasser auch total erholsam, das hat man am Kanal. Ich fände es manchmal cooler, wenn man über die Wolbecker Straße flanieren könnte, also ganz entspannt rübergehen. Und auch Schaufenster bummeln, auch wenn es hier nicht so viele Schaufenster zum Angucken gibt.',
@@ -650,7 +650,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 4,
-        id: 1,
+        id: 2,
         title: 'Sportangebot',
         quotes: [
           'Das Outdoor Gym gibt es auch noch am Kanal. Das ist auf jeden Fall positiv.',
@@ -660,7 +660,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 4,
-        id: 2,
+        id: 1,
         title: 'Ausgehen',
         quotes: [
           'Gute Cafés mit gutem Kaffee und gutem Frühstück gibt es auch. Auch breite Bürgersteige und Grünflächen.',
@@ -670,7 +670,7 @@ export const aims: Aim[] = [
       {
         categoryId: 2,
         id: 1,
-        title: 'Erholungspotenzial des Kanals',
+        title: 'Erholungspoten-\nzial des Kanals',
         quotes: [
           'Let’s say if I want to relax on the Kanal, it is also a park. It is nice and relaxed, but I think it can be a bit too noisy because everyone is gathering there. So it depends on what kind of relaxation  you like, but I think you still can still find spots where you can really calm down and just be you, unless if you walk a bit further. Even though I think yes, you can relax. And it’s not too bad. Maybe not perfect, but also not too bad either.',
         ],
@@ -678,7 +678,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Aufenthaltsqualität für verschiedene Gruppen',
+        title: 'Aufenthaltsquali-\ntät für verschie-\ndene Gruppen',
         quotes: [
           'Die vorhandenen Grünflächen am Bremer Platz bieten nicht wirklich Erholung durch die Struktur und die Nähe vom Bahnhof. Sie bieten nicht die Aufenthaltsqualität und abgesehen davon gibt es relativ wenige Grünflächen.',
         ],
@@ -691,7 +691,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 1,
-        title: 'Schlechte Erholungsqualität',
+        title: 'Schlechte\n Erholungsqualität',
         quotes: [
           'Es gibt zu wenige Bäume meiner Meinung nach. Und zu wenige Grünflächen auch.',
           'Ich glaube der Bremer Platz wird für uns nie ein Platz sein, wo wir uns zum Erholen hinlegen. Wir würden uns da nicht einfach mit Kind hinlegen, weil das schon eine Wiese ist, wo man gucken muss, was du herumliegt. Aber eine Wiese zum Hinlegen wäre grundsätzlich nicht schlecht, weil mit Kleinkind ist der Kanal nicht so der Brenner.',
@@ -718,7 +718,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 4,
-        id: 1,
+        id: 2,
         title: 'Kanalnahe Grünflächen',
         quotes: [
           'Ich brauch immer Grün um mich herum und da, wo ich mich auch mal bewegen kann. Am Kanal ging es bislang ganz gut. Wie es da weitergeht, weiß man nicht mit der Baustelle. Dahinter ist auch ein Park, den niemand kennt. Auch schön. Ansonsten hat man immer ein paar grüne Oasen.',
@@ -753,7 +753,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 1,
-        title: 'Party- und Vergnügungsmeile',
+        title: 'Party- und Ver-\ngnügungs-\nmeile',
         quotes: [
           'Dass sich die Gastronomie an der Wolbecker so aufreiht, ist ein bisschen merkwürdig. Das könnte nochmal anders verteilt sein.',
           'Es gibt viele ältere Menschen, das sind in der Regel Ältere, die sich darüber echauffieren, dass es so eine Partymeile geworden ist. Das ist ja eigentlich ganz schön manchmal. Aber ich gehe zum Beispiel am Wochenende nie zum Hafen, weil, das ist mir einfach zu voll da, das geht mir auf den Wecker.',
@@ -762,7 +762,7 @@ export const aims: Aim[] = [
       {
         categoryId: 2,
         id: 1,
-        title: 'Wachsendes Angebot',
+        title: 'Wachsendes\n Angebot',
         quotes: [
           'Das Kulturangebot ist ganz okay, durch viele Aktionen, die am Hafen stattfinden und drumherum. Das Kunstangebot speziell könnte noch besser sein. Im Speicher bin ich nicht so oft, aber innerhalb des Viertels könnte man mehr organisieren. Das Kulturangebot ist so an sich ganz okay. Was speziell bildende Kunst angeht, da gibt es auch nicht so viele Orte an denen ausgestellt werden kann und das kann sich auch verbessern.',
           'Es gibt auf jeden Fall mehr Kunst als in anderen Vierteln. Trotzdem muss ich in Bezug auf Kunst sagen, dass es mangelhaft ist. Es gibt aber viel Potenzial.',
@@ -780,7 +780,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 2,
-        title: 'Gastronomie und die Folgen',
+        title: 'Gastronomie und\n die Folgen',
         quotes: [
           'Even though this noise doesn’t bother me when I come home. When I don’t want to go out or I don’t want to have things to do and I want to relax, it does bother. It’s triggering. Even if you have a great sense of will, which I do, it’s still triggering to me, because I feel a bit of FOMO, like I am missing out on something.',
           'Es gibt mehr Scherben. Unter der Bedingung fehlt die Rücksichtnahme auf Andere, also man könnte bei den Kneipen im Viertel mehr Rücksicht nehmen auf andere, wo ich selber Fahrrad fahre oder diejenigen auch selber Fahrrad fahren. Und manchmal liegt überall Müll herum, das verstehe ich nicht.',
@@ -790,7 +790,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 4,
-        id: 1,
+        id: 2,
         title: 'Vielfältiges Kunstangebot',
         quotes: [
           'Es gibt schon viele Orte, wo Konzerte stattfinden, mit dem Hot Jazz Club, den Kneipen und der Kunsthalle. Da sind schon einige Sachen. Auch das Bennohaus, wo viele Dinge passieren, da wird viel gemacht.',
@@ -801,7 +801,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 4,
-        id: 2,
+        id: 1,
         title: 'Gastronomie',
         quotes: [
           'Wir sind bewusst an eine große Straße gezogen, weil wir das Leben hier gut finden. Es wäre natürlich schön, wenn hier weniger Autos lang fahren würden, aber wir wissen, dass das nicht geht. So würde ich das vielleicht bezeichnen. So finden wir das super, dass da mehr Cafés und Bars aufmachen und dass dort abends Leute über die Straße laufen. Das finde ich ok, auch wenn am Morgen eine Glasscherbe auf dem Boden liegt.',
@@ -812,7 +812,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 3,
-        title: 'Offenheit gegenüber Kunst/ Kunstverständnis',
+        title: 'Offenheit gegenüber\n Kunst/ Kunstverständnis',
         quotes: [
           'Ich würde der Kultur nicht unbedingt Konflikte unterstellen. Wenn man hier was machen wollte, dann könnte ich mir auch vorstellen, dass man hier einen Raum finden würde.',
           'Also von den Stadtteilen in Münster würde ich wieder sagen am besten. Auch Hansaforum und B-Side bieten so etwas an wie Graffiti und DJ-Producing und das Kulturbegriffe, die so nicht im Standardrepertoire einer Stadt vorkommen und dass das Hansaviertel halt so interessant und alternativ macht',
@@ -831,7 +831,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 1,
+        id: 2,
         title: 'Vielfalt',
         quotes: [
           'Das ist ein bisschen einseitig. Zu viel Essen. Es war mal vielfältiger vor ein paar Jahren und das hat sich aus meiner Sicht ein bisschen verschlechtert. Es gab hier mal einen Fotoladen und die Bücherei ist auch knapp an der Schließung vorbeigegangen.',
@@ -844,7 +844,7 @@ export const aims: Aim[] = [
     topics: [
       {
         categoryId: 1,
-        id: 1,
+        id: 2,
         title: 'Zugangsbeschränkung',
         quotes: [
           'Die klassischen Sachen, also Cafés, Kneipen gibt’s natürlich zu Hauf. Aber die sind dann immer mit einer ökonomischen Zugangsbeschränkung verbunden.',
@@ -852,7 +852,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 1,
-        id: 2,
+        id: 1,
         title: 'Orte nicht geeignet',
         quotes: [
           'Es gibt hier und da mal eine Tischtennisplatte, die zugänglich ist. An diesem Gymnasium und auch am Hansaplatz, also ich meine den Fußballplatz dort, das ist ziemlich überschaubar in der Qualität. Da wird so viel Staub aufgewirbelt, dass man danach Lungenprobleme hat.',
@@ -910,7 +910,7 @@ export const aims: Aim[] = [
     topics: [
       {
         categoryId: 1,
-        id: 1,
+        id: 3,
         title: 'Steigende Mieten',
         quotes: [
           'Angesichts der Umstände, wenn ich hier sehe, wie sich die Mieten entwickeln, ist es schon ein bisschen… Ich werde demnächst Rentnerin sein und dann wird es auch nicht einfacher werden.',
@@ -927,8 +927,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 1,
-        id: 3,
-        title: 'Treffpunkte für Ältere',
+        id: 1,
+        title: 'Treffpunkte\n für Ältere',
         quotes: [
           'Zum Beispiel gibt es den Hansagrill, der nicht mehr der Hansagrill ist, wo man früher viele ältere Leute getroffen hat. Ich könnte mir vorstellen, dass die Gastronomie, die vorhanden ist, nicht altersgerecht ist für ältere Altersgruppen. Außerdem ist der Wohnraum nicht bezahlbar für diese Altersgruppe.',
           'Das Problem ist, ich bin beeinflusst von meiner Arbeit, weil ich in diesem Bereich auch selbst schon Befragungen hier im Viertel durchgeführt habe. Und da schon häufig die Rückmeldung kam, dass es gerade für ältere Menschen sowas wie Begegnungsorte nicht gibt, gerade nach Corona. Einsamkeit ist ein großes Thema geworden. Für ältere Menschen ist es nicht so leicht geworden, aber wurde jetzt nochmal deutlich offensichtlicher. Kontakte zu halten, zu knüpfen. Begegnung zu schaffen und einfach mal rauszukommen.',
@@ -937,7 +937,7 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Nutzungskonflikte',
+        title: 'Nutzungs-\nkonflikte',
         quotes: [
           'Ich glaube der Bremer Platz wird für uns nie ein Platz sein, wo wir uns zum Erholen hinlegen. Wir würden uns da nicht einfach mit Kind hinlegen, weil das schon eine Wiese ist, wo man gucken muss, was du herumliegt. Aber eine Wiese zum Hinlegen wäre grundsätzlich nicht schlecht, weil mit Kleinkind ist der Kanal nicht so der Brenner.',
           'Die jungen Leute, wegen denen ich um halb 2, wie vor ein paar Wochen, die Polizei rufen musste. Fand ich nicht so toll, weil ich nicht die ewig rumzickende Alte dargeben möchte. Aber es war einfach ein bisschen zu viel. Und was auch nicht geht, ist bei uns auf der Leererstraße, wo wir relativ weit vom Hafen weg sind. Nachts bei offenem Fenster zu schlafen ist unmöglich.',
@@ -954,7 +954,7 @@ export const aims: Aim[] = [
       {
         categoryId: 5,
         id: 1,
-        title: 'Altersgerechte Mobilität',
+        title: 'Altersgerechte\n Mobilität',
         quotes: [
           'Ich bin eigentlich großer Fan meiner eigenen Mobilitätsform. Deswegen sehe ich da keine wirklichen Punkte. Vielleicht für ältere Gruppen, dass man, was es auch schon gibt, Taxi-Rikschas quasi für Krankenfahrten oder Einkaufsfahrten verstärkt nutzen kann und in das öffentliche Mobilitätsangebot mit aufnimmt.',
         ],
@@ -962,7 +962,7 @@ export const aims: Aim[] = [
       {
         categoryId: 5,
         id: 2,
-        title: 'Altersübergreifende Angebote',
+        title: 'Altersübergreifende\n Angebote',
         quotes: [
           'Generell altersübergreifende Angebote sind oft größere Veranstaltungen wie z.B. das B-Side-Festival. Aber dass sich junge und alte Leute mehr mischen? Es gibt Angebote, das kann aber auch mehr stattfinden. Damit man nicht nur in seiner eigenen Altersgruppe verweilt, könnte es mehr Angebote geben, von dem was ich wahrnehme.',
           'In der Altersgruppe von 0 bis, zu den ersten Teenager-Jahren, geht das von Kitas mit entsprechendem Ganztags-Angebot, über Grundschulen und Auswahlmöglichkeiten innerhalb des Viertels, ohne dass die Eltern und Kinder genötigt sind, das Viertel zu verlassen. Spielplätze und im weiteren Sinne Flächen für Familien, die sind grundsätzlich da, aber ich weiß nicht, ob das im ausreichenden Maße ist. Auch Geschäfte für Spielwaren oder Einkaufsmöglichkeiten für Ältere, solche Sachen fehlen.',
@@ -994,8 +994,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 3,
-        id: 1,
-        title: 'Vorstellungen von Nachbar:innenschaft',
+        id: 2,
+        title: 'Vorstellungen von\n Nachbar:innenschaft',
         quotes: [
           'We have a huge empty wall in our garden, and we did not come to agreement what we wanted to paint. People wanted to make sure it was not open, so that you could not be so creative. They wanted to make sure that the picture not bother anyone. I think it is just an empty wall, we could just have agreed and everyone could have just taken a part of it and decided as a neighborhood, but people were not as open, to just say: ”Hey let’s invite everyone who wants to do whatever they want to paint. So, I am not so sure. Based on my experience, maybe people are not that open, maybe there is some conflict.',
           'Ich kenne die Nachbarn nicht näher, aber ich wohne da schon seit Ewigkeiten. Man begrüßt sich. Die haben angefangen, im Garten rumzufummeln, ich finde zwar blöd, was sie da treiben, aber ich lasse sie in Ruhe. Die können da ruhig ihre wilden Gartenbauträume verwirklichen.',
@@ -1003,7 +1003,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 3,
-        id: 2,
+        id: 1,
         title: 'Rücksichtnahme',
         quotes: [
           'Leute fragen zu Recht nicht um Hilfe, aber ich schon. Es ist ein sehr junges Viertel, aber auch sehr spießig.',
@@ -1039,7 +1039,7 @@ export const aims: Aim[] = [
       {
         categoryId: 5,
         id: 1,
-        title: 'Achtsames Miteinander',
+        title: 'Achtsames\n Miteinander',
         quotes: [
           'Es gibt ja Viertelfest und so weiter, aber es könnten Zufriedenheits-Barometer, wie ihr das macht für alle Häuser als Routine eingeführt werden, wo alle einbezogen werden und jeder dort seine Sachen loswerden kann, damit in Zukunft das Miteinander ein bisschen basischer wird und auch ein bisschen kritikvoller.',
           'Es bräuchte weniger Barrierefreiheit, wenn es mehr Hilfsbereitschaft geben würde. Und ich denke, dass die Barrierefreiheit, die jetzt vorherrscht, und die Awareness, was das angeht, gut ist, also gut genug, wenn man jetzt anfängt an der Beziehungsebene zu arbeiten und eine Hilfsbereitschaft und eine Achtsamkeit gegenüber anderen etabliert. Dann wäre das eine gute Mischung.',
@@ -1052,7 +1052,7 @@ export const aims: Aim[] = [
     topics: [
       {
         categoryId: 1,
-        id: 1,
+        id: 2,
         title: 'Lärmbelästigung',
         quotes: [
           'Yes, it is a very lively neighborhood, even if you walk from that street or walk to Hafen it is still noisy. So yes, there is much more noise than in other “Viertels”.',
@@ -1061,7 +1061,7 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 1,
-        id: 2,
+        id: 1,
         title: 'Hygiene',
         quotes: [
           'Im Hansaviertel fällt mir nur eine Toilette am Bremer Platz ein, die würde ich aber nicht nutzen.',
@@ -1070,7 +1070,7 @@ export const aims: Aim[] = [
       {
         categoryId: 1,
         id: 3,
-        title: 'Gesundheit als kommunales Problem',
+        title: 'Gesundheit als\n kommunales Problem',
         quotes: [
           'Gesundheitsförderung wird gerade auf der kommunalen Ebene gesehen und wird da auch aktuell auf der wissenschaftlichen Ebene kommunal angegangen. Und da gibt’s gerade ein Projekt, das im Hansaviertel agiert, aber auch auf der gesamtstädtischen Ebene versucht, ein langfristiges Handlungsprogramm umzusetzen. Das ist ein Lösungsweg, der nicht ganz perfekt ist, weil der immer noch in kommunale Strukturen eingebunden ist und nicht die 100%ige Lösung für ärmere Menschen in einem Viertel ist, weil es kein Projekt sein wird, was mehr finanzielle Gleichheit herstellen kann.',
         ],
@@ -1094,14 +1094,14 @@ export const aims: Aim[] = [
       {
         categoryId: 3,
         id: 1,
-        title: 'Nutzungsmischung',
+        title: 'Nutzungs-\nmischung',
         quotes: [
           'Ich wohne an der Wolbecker Straße und ich kann mich nachts, im Prinzip dazwischen entscheiden, ob ich mit Sauerstoffmangel aufwachen möchte, weil ich die Fenster zu habe, oder ob ich um 6 Uhr morgens von den Müllabfuhrwägen und den Lieferanten vom Rewe geweckt werden möchte.',
         ],
       },
       {
         categoryId: 4,
-        id: 1,
+        id: 2,
         title: 'Ärztliche Versorgung',
         quotes: [
           'Es gibt reichlich auf dem Hansaring. Auf der Wolbecker Straße gibt es auch viele Ärzte und Ärztinnen.',
@@ -1110,15 +1110,15 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 4,
-        id: 2,
-        title: 'Öffentliche Sportanlagen',
+        id: 1,
+        title: 'Öffentliche\n Sportanlagen',
         quotes: [
           'Am Ostbad hat man die Beachvolleyball-Plätze, einen Basketball-Platz, Sportplätze, Fußballplätze. Ansonsten sind hier und da mal eine Tischtennisplatte und Spielplätze, wo man ein paar Sportangebote hat. Sind also ganz gut vertreten.',
         ],
       },
       {
         categoryId: 5,
-        id: 1,
+        id: 2,
         title: 'Trinkwasserversorgung',
         quotes: [
           'Ich weiß, dass es nur 2 Trinkwasserspender in ganz Münster gibt. Ist das richtig? Einen am Aasee und eine hier irgendwo. Ich hab da keinen Bedarf, aber gerade die Szene, Bremer Platz. Die könnten es gebrauchen',
@@ -1126,8 +1126,8 @@ export const aims: Aim[] = [
       },
       {
         categoryId: 5,
-        id: 2,
-        title: 'Bewegungsangebote',
+        id: 1,
+        title: 'Bewegungs-\nangebote',
         quotes: [
           'Es gibt ein Sportangebot. Gerade öffentliche Hallen... Die Hallen werden auch für Schulsport genutzt, sind dadurch viel verplant. Aber dass es auch öffentliche Sportangebote in Hallen geben kann, das gibt es nur sehr wenig bis gar nicht.',
           'Das Bewegen vor der eigenen Haustür ist nicht so einfach möglich, weil es kaum ruhige Straßen gibt, die nicht mit Autos befahren sind, wo nicht Verkehrsgefahren drohen. Es gibt nicht so viele Grünflächen, was auch für mittelalte Menschen ein Manko ist. Es gibt wenige Orte, wo man einfach rausgehen kann, weil das Viertel durch Mietwohnungen geprägt ist. Die vielleicht auch nicht unbedingt alle einen Balkon und nicht alle einen Garten haben und wo es schön wäre, Grünflächen zu haben. Die man dann auch nutzen kann, die hier aber wenig vorhanden sind.',
@@ -1150,7 +1150,7 @@ export const aims: Aim[] = [
       {
         categoryId: 2,
         id: 1,
-        title: 'Initiativennetzwerke (Hansaforum)',
+        title: 'Initiativennetzwerke\n (Hansaforum)',
         quotes: [
           'Gerade was das Hafencenter angeht. Das will das ganze Viertel nicht. Es gibt selten ein Thema, was alle nicht wollen und so knallhart in die Politik getrieben wird. Es ist nur ein einziger Investor und eine Partei, die will, dass das noch gebaut wird und der Rest der Stadt nicht. Keiner will das und da machen sich auch viele Leute für stark. Auch gerade hier im Viertel, da wird es gut vertreten. Da denke ich mittlerweile auch durch das Hansaforum, die B-Side und das Gasometer wird das vertreten.',
           'Wir wissen zumindest, dass es das Hansaforum gibt und wir wissen, wo das Gebäude ist. Wir binden uns nicht wirklich ein, weil wir unsere Sachen zu tun haben. Also wir hatten noch nicht wirklich die Zeit zu. Wenn wir wollten, dann könnten wir. Auch durch das B-Side Festival und es gibt ja auch verschiedene Dinge, die man da machen kann und wir haben ja auch schon Kontakt zu Leuten aus dem Viertel, dass man sich wahrscheinlich mehr engagieren könnte, wenn man wollte.',
@@ -1161,7 +1161,7 @@ export const aims: Aim[] = [
       {
         categoryId: 4,
         id: 1,
-        title: 'Zivilgesellschaftliche Initiative',
+        title: 'Zivilgesellschaftliche\n Initiative',
         quotes: [
           'Grundsätzlich habe ich den Eindruck, gerade auch dadurch, dass hier relativ starke zivilgesellschaftliche Strukturen sind mit vielen Initiativen, die auch stadtteilpolitisch aktiv sind. Von daher habe ich schon den Eindruck, dass man da viel machen kann und dass man gute Möglichkeiten hat, sich einzubringen.',
           'Durch das Hansaforum und auch durch die B-Side habe ich den Eindruck, dass das Initiativenfeld pluralistisch ist, dass viel passiert und dass Leute vertreten werden.',
@@ -1172,7 +1172,7 @@ export const aims: Aim[] = [
       {
         categoryId: 5,
         id: 1,
-        title: 'Gemeinschaftliche Baustrukturen',
+        title: 'Gemeinschaftliche\n Baustrukturen',
         quotes: [
           'Dadurch, dass die Räume nicht so vorhanden sind. Das hat viel mit der baulichen Struktur, wie Wohnen, zu tun. Weil es nicht gemeinschaftlich organisiert ist. Es geht halt kaum. In den Häusern gibt es keine gemeinschaftlichen, sitzbaren Flächen, wo man sich treffen kann.',
           'Es braucht Einfluss daran, dass solche Räume mehr mit eingeplant werden. Dass mehr solcher Räume entstehen, wo man sich ungezwungen treffen kann.',
@@ -1182,7 +1182,7 @@ export const aims: Aim[] = [
       {
         categoryId: 5,
         id: 2,
-        title: 'Diversere Kommunikationswege',
+        title: 'Diversere\n Kommunikationswege',
         quotes: [
           'Ich krieg ein Hintergrundrauschen mit, was da z.B. das Hansaforum macht, und und und. Aufgrund meiner Entscheidung, keinen Zugang zu digitalen Medien zu haben, bin ich da auch oft wieder raus. Oder ich erfahre es später, dass irgendwas läuft.',
           'Ich musste bei Barrierefreiheit bisher immer an Rollstuhlfahrer:innen denken. Und da würde ich sagen, dass es nicht barrierefrei ist, auch wegen anderen Hürden. Es gibt zu wenige Kulturvereine, die dafür sorgen, dass Leute verschiedenen Alters und der Querschnitt des Viertels sich begegnen können.',
