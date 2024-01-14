@@ -76,14 +76,6 @@ export default function App() {
               />
             );
           })}
-          <line
-            x1="0"
-            y1="50"
-            x2="100 "
-            y2="50"
-            stroke="#000"
-            strokeWidth={1}
-          />
         </svg>
 
         <svg
@@ -92,7 +84,7 @@ export default function App() {
           preserveAspectRatio="xMidYMid meet"
           width="100%"
           height="50%"
-          style={{ marginTop: '-6px' }}
+          style={{ marginTop: '-8px' }}
         >
           {aims.map((aim, index) => (
             <Aim
@@ -120,6 +112,7 @@ export default function App() {
           <text x={50} y={7.5} fontSize={2.25} textAnchor="middle">
             index
           </text>
+          <line x1="0" y1="0" x2="100" y2="0" stroke="#000" strokeWidth={1} />
         </svg>
       </div>
 
