@@ -10,20 +10,20 @@
   &__quote {
     &__circle {
       &--pink {
-        fill: $color-primary-200;
+        fill: $color-primary-300;
         transition: all 0.2s ease;
       }
       &--blue {
-        fill: $color-secondary-200;
+        fill: $color-secondary-300;
         transition: all 0.2s ease;
       }
     }
     &:hover {
       .gwb-category__quote__circle--pink {
-        fill: $color-primary-300;
+        fill: $color-primary-400;
       }
       .gwb-category__quote__circle--blue {
-        fill: $color-secondary-300;
+        fill: $color-secondary-400;
       }
     }
   }

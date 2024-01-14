@@ -13,10 +13,10 @@
 
   &:hover {
     path {
-      fill: $color-secondary-200;
+      fill: $color-secondary-50;
     }
     text {
-      fill: #fff;
+      fill: $color-secondary-400;
     }
   }
 
@@ -25,11 +25,14 @@
       fill: #fff;
     }
     path {
-      fill: $color-secondary-200;
+      fill: $color-secondary-300;
     }
     &:hover {
       path {
-        fill: $color-secondary-100;
+        fill: $color-secondary-200;
+      }
+      text {
+        fill: white;
       }
     }
   }
