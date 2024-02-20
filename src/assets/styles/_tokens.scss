@@ -30,3 +30,16 @@ $breakpoints: (
     @content;
   }
 }
+
+$transition: all 0.2s ease;
+
+$box-shadow: 2px 2px 80px rgba(black, 0.5);
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}

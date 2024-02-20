@@ -5,10 +5,10 @@
 
   path {
     fill: #fff;
-    transition: all 0.3s ease;
+    transition: $transition;
   }
   text {
-    transition: all 0.3s ease;
+    transition: $transition;
   }
 
   &:hover {

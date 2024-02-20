@@ -5,17 +5,17 @@
 
   &__path,
   &__text {
-    transition: all 0.2s ease;
+    transition: $transition;
   }
   &__quote {
     &__circle {
       &--pink {
         fill: $color-primary-300;
-        transition: all 0.2s ease;
+        transition: $transition;
       }
       &--blue {
         fill: $color-secondary-300;
-        transition: all 0.2s ease;
+        transition: $transition;
       }
     }
     &:hover {
@@ -25,6 +25,13 @@
       .gwb-category__quote__circle--blue {
         fill: $color-secondary-400;
       }
+    }
+  }
+
+  &__name {
+    transition: $transition;
+    &:hover {
+      fill: $color-primary-400;
     }
   }
 }

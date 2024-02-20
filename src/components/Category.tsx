@@ -1,24 +1,26 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, MouseEvent } from 'react';
 import styles from '@/components/category.module.scss';
 
 interface Props {
   name: string;
-  description: string;
   topics: Topic[];
   id: number;
-  subjectCount: number;
+  topicCount: number;
   selectedAim: string;
   setSelectedTopic: Dispatch<SetStateAction<Topic | undefined>>;
+  setSelectedCategory: Dispatch<
+    SetStateAction<{ x: number; y: number; id: number } | undefined>
+  >;
 }
 
 export default function Category({
   name,
-  description,
   topics,
   id,
-  subjectCount,
+  topicCount,
   selectedAim,
   setSelectedTopic,
+  setSelectedCategory,
 }: Props) {
   const index = id - 1;
   const degree = index * 36;
@@ -26,10 +28,10 @@ export default function Category({
 
   const getRadius = (subId: number) => {
     let radius = 46;
-    const area = Math.PI * Math.pow(radius, 2) * (1 / 10) * subjectCount;
+    const area = Math.PI * Math.pow(radius, 2) * (1 / 10) * topicCount;
 
     radius = Math.sqrt(((area / subId) * 10) / Math.PI);
-    radius = (radius / subjectCount) * subId;
+    radius = (radius / topicCount) * subId;
 
     return radius;
   };
@@ -37,6 +39,19 @@ export default function Category({
   const getText = (text: string) => {
     let lines = text.split('\n');
     return lines;
+  };
+
+  const nameRef = useRef<SVGTextPathElement | null>(null);
+
+  const handleMouseOver = (e: MouseEvent<any>) => {
+    setSelectedCategory({
+      x: e.clientX,
+      y: e.clientY,
+      id: id,
+    });
+  };
+  const handleMouseLeave = () => {
+    setSelectedCategory(undefined);
   };
 
   return (
@@ -135,8 +150,19 @@ export default function Category({
             id="titlePath"
           />
         </defs>
-        <text x={(50 * Math.PI) / 10} textAnchor="middle" fontSize={3}>
-          <textPath dominantBaseline="text-before-edge" xlinkHref="#titlePath">
+        <text
+          className={styles['gwb-category__name']}
+          x={(50 * Math.PI) / 10}
+          textAnchor="middle"
+          fontSize={3}
+        >
+          <textPath
+            dominantBaseline="text-before-edge"
+            xlinkHref="#titlePath"
+            ref={nameRef}
+            onMouseOver={handleMouseOver}
+            onMouseLeave={handleMouseLeave}
+          >
             {name}
           </textPath>
         </text>

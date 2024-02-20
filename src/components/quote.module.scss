@@ -27,7 +27,7 @@
     max-height: 100%;
     padding: 24px;
     background-color: $color-primary-400;
-    box-shadow: 2px 2px 80px rgba(black, 0.5);
+    box-shadow: $box-shadow;
     animation: fade-in 0.2s ease;
 
     @include break(576) {
@@ -40,13 +40,25 @@
       justify-content: space-between;
 
       &__title {
-        margin-top: 0;
         color: white;
-        font-size: 24px;
+
+        &__overline {
+          margin-top: 0;
+          margin-bottom: 8px;
+          font-size: 16px;
+        }
+        &__title {
+          margin-top: 0;
+          font-size: 24px;
+
+          @include break(576) {
+            width: 90%;
+            font-size: 32px;
+          }
+        }
 
         @include break(576) {
           width: 90%;
-          font-size: 32px;
         }
       }
 
@@ -67,7 +79,7 @@
         svg {
           width: 24px;
           fill: white;
-          transition: all 0.2s ease;
+          transition: $transition;
         }
 
         &:hover {
@@ -108,14 +120,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
   }
 }

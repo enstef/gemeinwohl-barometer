@@ -7,25 +7,25 @@ export const categories: Category[] = [
   },
   {
     id: 2,
-    name: 'Potentiale',
-    description: '',
+    name: 'Potenziale',
+    description: 'Potenziale beschreibt…',
   },
   {
     id: 3,
     name: 'Konfliktfelder',
-    description: '',
+    description: 'Konfliktfelder beschreibt…',
   },
   {
     id: 4,
     name: 'Anerkennung',
     description:
-      'Anerkennung beschreibt im Viertel wahrgenommene As-pekte, die bereits zum Gemeinwohl beitragen.',
+      'Anerkennung beschreibt im Viertel wahrgenommene Aspekte, die bereits zum Gemeinwohl beitragen.',
   },
   {
     id: 5,
     name: 'Erfordernisse',
     description:
-      'Erfordernisse beschreibt im Viertel wahrgenommene Vor-aussetzungen, die als notwendig erachtet werden, um zum Gemeinwohl beizutragen.',
+      'Erfordernisse beschreibt im Viertel wahrgenommene Voraussetzungen, die als notwendig erachtet werden, um zum Gemeinwohl beizutragen.',
   },
 ];
 
