@@ -8,12 +8,14 @@ export const categories: Category[] = [
   {
     id: 2,
     name: 'Potenziale',
-    description: 'Potenziale beschreibt…',
+    description:
+      'Potenziale beschreiben im Viertel vorhandene, verfügbare Mittel und Möglichkeiten für das Gemeinwohl.',
   },
   {
     id: 3,
     name: 'Konfliktfelder',
-    description: 'Konfliktfelder beschreibt…',
+    description:
+      'Konfliktfelder beschreiben die Spannungen zwischen unterschiedlichen Erfordernissen im Viertel.',
   },
   {
     id: 4,
