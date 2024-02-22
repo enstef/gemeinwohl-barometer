@@ -60,7 +60,6 @@ export default function App() {
     );
 
     if (foundCategory) {
-      console.log(selectedCategory);
       setSelectedDesc(foundCategory.description);
     } else setSelectedDesc(undefined);
   }, [selectedCategory]);
