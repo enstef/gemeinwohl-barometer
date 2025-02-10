@@ -1,4 +1,4 @@
-@import 'src/assets/styles/tokens';
+@import "src/assets/styles/tokens";
 
 .gwb {
   height: 100vh;
@@ -20,7 +20,7 @@
     padding: 16px;
     background-color: white;
     font-size: 20px;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-s;
     animation: fade-in 0.2s ease;
     pointer-events: none;
   }
